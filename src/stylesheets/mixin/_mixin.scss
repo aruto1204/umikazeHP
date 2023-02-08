@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@use "../setting" as *;
+
+// ================================================================
+// mixin
+// ================================================================
+// ----------------------------------------------------------------
+//メディアクエリ用mixin
+// ----------------------------------------------------------------
+@mixin mq($breakpoint: pc) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+// ----------------------------------------------------------------
+// テキスト用mixin
+// ----------------------------------------------------------------
+@mixin txt($font-size: 16px, $font-weight: 400, $color: #000, $text-align: left) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  text-align: $text-align;
+}
+@mixin txt-option($line-height: 1, $letter-spacing: 0px) {
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+// ----------------------------------------------------------------
+// 表示行数制限mixin
+// ----------------------------------------------------------------
+@mixin line-clamp($line-count) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-count;
+  overflow: hidden;
+}

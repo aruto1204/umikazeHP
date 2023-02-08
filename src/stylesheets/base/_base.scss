@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+// ================================================================
+// ベーススタイル
+// ================================================================
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $color-default-font;
+  font-family: $font-family-base;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+
+  background-color: $color-white;
+}
+body.noscroll {
+  overflow: hidden;
+}
+body.bg-gray {
+  background-color: #4d4d4d;
+}
+
+:where(img, svg, img[src$=".svg"]) {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+// 透過度
+$opacity: 0.7;
+@media (hover: hover) {
+  a:hover {
+    opacity: $opacity;
+    cursor: pointer;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+strong {
+  font-weight: 900;
+}
+
+b {
+  font-weight: 700;
+}
+
+input,
+textarea {
+  border: none;
+  width: 100%;
+}

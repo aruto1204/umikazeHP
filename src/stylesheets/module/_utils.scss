@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+// ================================================================
+// 汎用クラス
+// ================================================================
+// スマホだけ非表示
+.utils-hidden-mobile {
+  @include mq(pc) {
+    display: inline-block !important;
+  }
+  @include mq(mobile) {
+    display: none !important;
+  }
+}
+.utils-block-hidden-mobile {
+  @include mq(pc) {
+    display: block !important;
+  }
+  @include mq(mobile) {
+    display: none !important;
+  }
+}
+
+// PCだけ非表示
+.utils-hidden-pc {
+  @include mq(pc) {
+    display: none !important;
+  }
+  @include mq(mobile) {
+    display: inline-block !important;
+  }
+}
+.utils-block-hidden-pc {
+  @include mq(pc) {
+    display: none !important;
+  }
+  @include mq(mobile) {
+    display: block !important;
+  }
+}
+
+// 非表示
+.utils-hidden {
+  display: none !important;
+}
+
+// 白反転
+.utils-color-invert {
+  filter: brightness(0) invert(1) !important;
+}
+
+// 表示
+.utils-visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}

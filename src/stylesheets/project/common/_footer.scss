@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// footer
+// ================================================================
+.footer {
+  width: 100%;
+}
+.footer__inner {
+  background: #efefef;
+  padding-left: rem(10px);
+  padding-right: rem(40px);
+  padding-top: rem(50px);
+  padding-bottom: rem(60px);
+  @include mq(pc) {
+    padding: 0 rem(150px);
+    padding-top: rem(50px);
+    padding-bottom: rem(60px);
+  }
+}
+.footer__content-container {
+  @include mq(mobile) {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  text-align: center;
+  @include txt(24px, 700, $color-default-font, left);
+  @include txt-option(1.6, 3.6px);
+  @include mq(pc) {
+    margin: 0 auto;
+    @include txt(40px, 700, $color-default-font, left);
+    @include txt-option(1, 6px);
+  }
+}
+
+// ================================================================
+//  footer__menu
+// ================================================================
+.footer__nav {
+  @include mq(pc) {
+    margin-top: rem(40px);
+  }
+}
+.footer__items {
+  display: block;
+  width: rem(100px);
+  @include mq(pc) {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+}
+.footer__item {
+  position: relative;
+  display: inline-flex;
+}
+.footer__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(-8px);
+  width: 100%;
+  height: rem(2px);
+  background: $color-red;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+.footer__item a {
+  @include txt(16px, 400, $color-default-font, left);
+  @include txt-option(1.5, 0px);
+}
+.footer__item + .footer__item {
+  @include mq(mobile) {
+    margin-top: rem(20px);
+  }
+  @include mq(pc) {
+    margin-left: rem(30px);
+  }
+}
+@media (hover: hover) {
+  .footer__item:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+// ================================================================
+//  copyright
+// ================================================================
+.footer__foot {
+  width: 100%;
+  height: rem(60px);
+  background: #cccccc;
+  padding: 0 rem(10px);
+
+  display: flex;
+  align-items: center;
+  @include mq(pc) {
+    padding: 0 rem(150px);
+  }
+}
+.footer__copy {
+  @include txt(13px, 400, $color-default-font, left);
+  @include txt-option(1.46, 0px);
+}

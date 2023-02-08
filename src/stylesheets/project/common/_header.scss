@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// header
+// ================================================================
+.header {
+  width: 100%;
+  height: rem(70px);
+  position: fixed;
+  z-index: 10;
+  @include mq(pc) {
+    height: rem(100px);
+  }
+}
+.header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding-left: rem(30px);
+  padding-right: rem(20px);
+
+  @include mq(pc) {
+    padding-left: rem(50px);
+    padding-right: rem(0px);
+  }
+}
+.header__logo {
+  position: relative;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.header__logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(20px);
+  width: 100%;
+  height: rem(2px);
+  background: $color-red;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.5s;
+}
+.header__logo a {
+  @include txt(16px, 700, $color-default-font, left);
+  @include txt-option(1.5, 2.4px);
+
+  @include mq(pc) {
+    @include txt(40px, 700, $color-default-font, left);
+    @include txt-option(1.5, 6px);
+  }
+  @include mq(tb) {
+    @include txt(28px, 700, $color-default-font, left);
+    @include txt-option(1.5, 3px);
+  }
+}
+@media (hover: hover) {
+  .header__logo:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+// ================================================================
+//  header__menu
+// ================================================================
+.header__right {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.header__nav {
+  display: none;
+
+  @include mq(pc) {
+    display: block;
+    margin-right: rem(30px);
+  }
+}
+.header__items {
+  display: flex;
+  align-items: center;
+}
+.header__item {
+  position: relative;
+}
+.header__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(-8px);
+  width: 100%;
+  height: rem(2px);
+  background: $color-red;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+.header__item a {
+  @include txt(16px, 400, $color-default-font, left);
+  @include txt-option(1.5, 0px);
+}
+.header__item + .header__item {
+  margin-left: rem(30px);
+}
+@media (hover: hover) {
+  .header__item:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+// ================================================================
+//  contact__btn
+// ================================================================
+.header__contact {
+  display: none;
+
+  @include mq(pc) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: rem(200px);
+    height: inherit;
+    transition: all 0.5s;
+  }
+}
+.header__contact::before,
+.header__contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header__contact::before {
+  background: transparent linear-gradient(222deg, #e81a2b 0%, #d81828 0%, #e1192a 0%, #740d16 100%);
+  z-index: -1;
+  transition: opacity 1s;
+}
+.header__contact::after {
+  background: transparent linear-gradient(234deg, #efefef 0%, #787878 100%);
+  z-index: -2;
+}
+.header__contact a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  @include txt(16px, 400, #f8f8f8, left);
+  @include txt-option(1.5, 3.2px);
+}
+.header__contact span {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: rem(27px);
+  width: rem(140px);
+  height: rem(1px);
+  background-color: $color-red;
+  transform: scale(0, 1);
+  transform-origin: top left;
+}
+@keyframes arrow01 {
+  0% {
+    transform: scale(0, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.header__contact span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: rem(0px);
+  bottom: rem(-4px);
+  width: rem(8px);
+  height: rem(9px);
+  border-right: 1px solid $color-red;
+  transform: rotate(-45deg) scale(1, 0);
+}
+@keyframes arrow02 {
+  0% {
+    transform: rotate(-45deg) scale(1, 0);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1, 1);
+  }
+}
+@media (hover: hover) {
+  .header__contact:hover {
+    opacity: 1;
+    color: $color-red;
+    transition: color 1s;
+  }
+  .header__contact:hover::before {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .header__contact:hover span {
+    animation: arrow01 1s forwards;
+  }
+  .header__contact:hover span::after {
+    animation: arrow02 0.3s forwards;
+    animation-delay: 1s;
+  }
+}

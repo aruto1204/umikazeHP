@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// section
+// ================================================================
+.section {
+}
+.section__title {
+  @include txt(24px, 700, $color-default-font, left);
+  @include txt-option(1, 6px);
+  font-size: rem(24px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include mq(pc) {
+    font-size: rem(40px);
+  }
+}
+.section__title::before {
+  content: "";
+  width: rem(47px);
+  height: rem(46.5px);
+  background-image: url("../images/01_top/section_title.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: min(toVw(30), 30px);
+}
+.section__text {
+  max-width: rem(595px);
+  margin-top: rem(60px);
+  @include txt(16px, 400, $color-default-font, left);
+  @include txt-option(1.8, 2.4px);
+  font-size: rem(16px);
+}
