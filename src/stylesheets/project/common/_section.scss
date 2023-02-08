@@ -17,15 +17,6 @@
     font-size: rem(40px);
   }
 }
-.section__title::before {
-  content: "";
-  width: rem(47px);
-  height: rem(46.5px);
-  background-image: url("../images/01_top/section_title.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-right: min(toVw(30), 30px);
-}
 .section__text {
   max-width: rem(595px);
   margin-top: rem(60px);
