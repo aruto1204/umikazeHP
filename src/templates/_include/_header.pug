@@ -45,3 +45,20 @@
   }
 //header
 header.header
+  .header__inner
+    i.fa-brands.fa-instagram
+    nav.header__nav
+      ul.header__items
+        each navItem in navItems
+          li.header__item
+            a(href=navItem.url) #{navItem.name}
+    .header__link
+      .header__topic
+        a(href=navTopic.url class="link-btn") !{navTopic.name}
+      .header__wrapper
+        .header__reserve
+          a(href=navReserve.url class="link-btn") !{navReserve.name}
+        .header__payment
+          a(href=navPayment.url class="link-btn") #{navPayment.name}
+      .header__instagram
+        a(href=navInstagram.url) #{navInstagram.name}

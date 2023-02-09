@@ -12,6 +12,6 @@
 
   @include mq(pc) {
     max-width: 1366px; //1366px
-    padding: 0 min(toVw(150), 150px);
+    padding: 0 min(toVw(40), 40px);
   }
 }

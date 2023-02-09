@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// link-btn
+// ================================================================
+.link-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include txt(20px, 400, $color-white, left);
+  @include txt-option(1, 0px);
+  background-color: $color-green;
+  text-align: center;
+}

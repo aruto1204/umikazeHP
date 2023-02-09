@@ -19,7 +19,6 @@
   display: block;
   width: 100%;
   height: rem(3px);
-  background-color: $color-red;
   margin-left: auto;
   transition: all 0.5s;
   @include mq(pc) {
@@ -110,7 +109,6 @@
   bottom: rem(-8px);
   width: 100%;
   height: rem(2px);
-  background: $color-red;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: transform 0.3s;
