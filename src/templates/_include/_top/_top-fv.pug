@@ -1,0 +1,31 @@
+-// 制作実績の画像とURL
+-
+  const slideItems = [
+    {
+      class: 'test-slide01',
+      img: '../images/01_top/codolife_mockup.png',
+      alt: 'codolife',
+      link: '',
+    },
+    {
+      class: 'test-slide02',
+      img: '../images/01_top/Engress_mockup.png',
+      alt: 'engress',
+      link: '',
+    },
+    {
+      class: 'test-slide03',
+      img: '../images/01_top/ishiikadan_mockup.png',
+      alt: 'ishiikadan',
+      link: '',
+    },
+  ]
+//top-fv
+.top-fv
+  .top-fv__icon
+  .top-fv__content-container
+    .swiper
+      ul.swiper-wrapper
+        each slideItem in slideItems
+          li.swiper-slide(class=slideItem.class)
+      .swiper-pagination

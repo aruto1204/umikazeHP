@@ -41,7 +41,7 @@
   const navInstagram = {
         name: "instagram",
         url: "",
-        icon: "",
+        icon: "../images/01_top/square-instagram.svg",
   }
 //header
 header.header
@@ -61,4 +61,5 @@ header.header
         .header__payment
           a(href=navPayment.url class="link-btn") #{navPayment.name}
       .header__instagram
-        a(href=navInstagram.url) #{navInstagram.name}
+        a(href=navInstagram.url)
+          img(src=navInstagram.icon, alt="")

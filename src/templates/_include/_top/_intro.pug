@@ -1,0 +1,26 @@
+-//入力内容
+-
+  const introMain = {
+    title: 'ごあいさつ',
+    text: '仮テキスト<br>ああああああああああああああああああああああああああああああああああああああ<br>ああああああああああああああああああああああああああああああああああああああああああああああ',
+    name: '菊池 邦枝',
+    degree: '院長',
+    img: '',
+  }
+//intro
+section
+  .intro
+    .inner
+      .intro__area
+        .intro__wrapper
+          .intro__main
+            .intro__main__content
+              h2.intro__main__content-title #{introMain.title}
+              p.intro__main__content-text !{introMain.text}
+              p.intro__main__content-name
+                span.intro__main__content-degree #{introMain.degree}
+                |#{introMain.name}
+            .intro__main-img
+          .intro__history
+          .intro__degree
+          .intro__activity

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// top-fv
+// ================================================================
+.top-fv {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.top-fv__icon {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  width: 100px;
+  height: 100px;
+  background: sienna;
+  z-index: 5;
+}

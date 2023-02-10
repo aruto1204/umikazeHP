@@ -2,14 +2,17 @@
 export default () => {
   const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
-    spaceBetween: 60,
+    //spaceBetween: 60,
     loop: true,
     speed: 300,
     centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+    },
     // ページネーションが必要なら追加
     breakpoints: {
       768: {
-        slidesPerView: 2.1,
+        slidesPerView: 1.2,
       },
     },
     pagination: {
