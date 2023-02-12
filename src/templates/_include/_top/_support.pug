@@ -1,0 +1,53 @@
+-//入力内容
+-
+  const supportContent = {
+    img: '../images/01_top/support_icon.png',
+    alt: 'アイコン',
+    title: 'うみかぜ助産院の',
+    text: '女性に寄り添うサポートを',
+    number: '3',
+    logo: '3 L',
+  }
+  const supportItems = [
+    {
+      title: 'Lady',
+      text: '淑女の意味を持つlady. 女性に対する敬意を表しています。女性が大切に思 っているパートナーやお子様、ご家族も含めた皆様を対象に、まごころを込めて支援します。',
+      img: '../images/01_top/support_lady.png',
+      alt: 'イメージ画像',
+    },
+    {
+      title: 'Love',
+      text: '皆様がたくさんの愛に包まれるよう、人に寄り添いまごころを持って寄り添うことを大切に、愛を育むお手伝いをします。',
+      img: '../images/01_top/support_love.png',
+      alt: 'イメージ画像',
+    },
+    {
+      title: 'Life',
+      text: '生まれてきた奇跡的ないのちを大切に思い、その人らしい人生を送るために共に考え、さまざまな年代の女性の健康をサポートします。',
+      img: '../images/01_top/support_life.png',
+      alt: 'イメージ画像',
+    },
+  ]
+//support
+section
+  .support
+    .inner-s
+      .support__content
+        .support__icon
+          img(src=supportContent.img, alt=supportContent.alt)
+        .support__text
+          p #{supportContent.text}
+        .support__title
+          h2
+          |#{supportContent.title}
+          span.support__title-logo #{supportContent.logo}
+      .support__wrapper
+        ul.support__items
+          each supportItem in supportItems
+            li.support__item
+              .support__item-title
+                h3 #{supportItem.title}
+              .support__item-text
+                p #{supportItem.text}
+              .support__item-img
+                img(src=supportItem.img, alt=supportItem.alt)

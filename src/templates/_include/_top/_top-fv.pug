@@ -1,31 +1,37 @@
 -// 制作実績の画像とURL
 -
+  const topIcon = {
+    img: '../images/01_top/umikaze_icon.png',
+    alt: 'umikaze_icon',
+  }
   const slideItems = [
     {
       class: 'test-slide01',
-      img: '../images/01_top/codolife_mockup.png',
-      alt: 'codolife',
+      img: '../images/01_top/top-fv_slide01.png',
+      alt: 'top-fv_slide',
       link: '',
     },
     {
       class: 'test-slide02',
-      img: '../images/01_top/Engress_mockup.png',
-      alt: 'engress',
+      img: '../images/01_top/top-fv_slide02.png',
+      alt: 'top-fv_slide',
       link: '',
     },
     {
       class: 'test-slide03',
-      img: '../images/01_top/ishiikadan_mockup.png',
-      alt: 'ishiikadan',
+      img: '../images/01_top/top-fv_slide03.png',
+      alt: 'top-fv_slide',
       link: '',
     },
   ]
 //top-fv
 .top-fv
   .top-fv__icon
+    img(src=topIcon.img, alt=topIcon.alt)
   .top-fv__content-container
     .swiper
       ul.swiper-wrapper
         each slideItem in slideItems
-          li.swiper-slide(class=slideItem.class)
+          li.swiper-slide
+            img(src=slideItem.img, alt=slideItem.alt)
       .swiper-pagination

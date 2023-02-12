@@ -6,16 +6,19 @@
 // ================================================================
 .header {
   width: 100%;
-  height: rem(100px);
+  height: rem(149px);
   position: fixed;
   z-index: 10;
   background-color: $color-blue;
 }
 .header__inner {
-  height: inherit;
+  width: 100%;
+  height: rem(74px);
   display: flex;
   align-items: center;
-  padding: rem(20px) rem(40px);
+  padding-left: rem(186px);
+  padding-right: rem(100px);
+  margin-top: rem(50px);
   justify-content: space-between;
 }
 
@@ -23,42 +26,77 @@
 //  header_nav
 // ================================================================
 .header__nav {
+  width: 100%;
 }
 .header__items {
+  max-width: rem(1225px);
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.header__item + .header__item {
-  margin-left: rem(20px);
+.header__item {
+  max-width: rem(120px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+.header__item:nth-child(5) {
+  max-width: rem(381px);
+  width: 100%;
+  white-space: nowrap;
+}
+// .header__item + .header__item {
+//   margin-left: rem(56px);
+// }
 .header__item a {
-  @include txt(20px, 400, $color-default-font, left);
-  @include txt-option(1, 0px);
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(1.68, 0px);
 }
 .header__link {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  max-width: rem(400px);
+  max-width: rem(350px);
 
   height: 100%;
 }
 .header__topic {
+  width: rem(132px);
+}
+.header__topic a {
+  @include txt(16px, 700, $color-default-font, center);
+  @include txt-option(1.56, 0px);
+  color: $color-white;
 }
 .header__wrapper {
+  width: rem(150px);
   height: inherit;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  margin-left: rem(13px);
 }
 .header__reserve {
-  height: 50%;
+  width: 100%;
+  height: rem(33px);
+}
+.header__reserve a {
+  @include txt(16px, 700, $color-default-font, center);
+  @include txt-option(1.56, 0px);
+  color: $color-white;
 }
 .header__payment {
-  height: 50%;
+  width: 100%;
+  height: rem(33px);
   margin-top: auto;
 }
+.header__payment a {
+  @include txt(16px, 700, $color-default-font, center);
+  @include txt-option(1.56, 0px);
+  color: $color-white;
+}
 .header__instagram {
-  width: rem(50px);
-  height: rem(50px);
+  width: rem(36px);
+  height: rem(36px);
+  margin-left: auto;
 }

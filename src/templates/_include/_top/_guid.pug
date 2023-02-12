@@ -1,0 +1,31 @@
+-//入力内容
+-
+  const guidItems = [
+    {
+      url: '',
+      img: '../images/01_top/event.png',
+      alt: 'イメージ画像',
+      title: 'イベントのご案内',
+      text: 'うみかぜ助産院では季節に合わせたイベントを行っております。',
+    },
+    {
+      url: '',
+      img: '../images/01_top/classroom.png',
+      alt: 'イメージ画像',
+      title: '各教室のご案内',
+      text: 'マタニティーヨガをはじめ、お産前お産後に役立つ教室を開催しております。',
+    },
+  ]
+//guid
+section
+  .guid
+    .inner-s
+      .guid__content
+        ul.guid__items
+          each guidItem in guidItems
+            li.guid__item
+              a(href=guidItem.url).guid__item-link
+                .guid__item-img
+                  img(src=guidItem.img, alt=guidItem.alt)
+                .guid__item-title #{guidItem.title}
+                .guid__item-text #{guidItem.text}

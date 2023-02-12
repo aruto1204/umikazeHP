@@ -11,10 +11,9 @@
 }
 .top-fv__icon {
   position: absolute;
-  top: 200px;
-  left: 300px;
-  width: 100px;
-  height: 100px;
-  background: sienna;
+  width: toVw(246.1);
+  height: toVw(268.8);
+  top: toVw(179);
+  left: toVw(191);
   z-index: 5;
 }

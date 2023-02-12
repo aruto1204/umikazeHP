@@ -1,0 +1,56 @@
+-//入力内容
+-
+  const topicContent = {
+    title: 'TOPIC',
+    text: '最新情報',
+  }
+  const topicItems = [
+    {
+      url: '',
+      img: '../images/01_top/topic_01.png',
+      alt: 'サムネイル画像',
+      title: '元気な女の子誕生!',
+      date: '2023.04.01',
+    },
+    {
+      url: '',
+      img: '../images/01_top/topic_02.png',
+      alt: 'サムネイル画像',
+      title: '元気な女の子誕生!',
+      date: '2023.04.01',
+    },
+    {
+      url: '',
+      img: '../images/01_top/topic_03.png',
+      alt: 'サムネイル画像',
+      title: '元気な女の子誕生!',
+      date: '2023.04.01',
+    },
+    {
+      url: '',
+      img: '../images/01_top/topic_04.png',
+      alt: 'サムネイル画像',
+      title: '元気な女の子誕生!',
+      date: '2023.04.01',
+    },
+  ]
+//topic
+section
+  .topic
+    .inner-s
+      .topic__area
+        .topic__title
+          h2 #{topicContent.title}
+        .topic__text
+          p #{topicContent.text}
+        .topic__content
+          ul.topic__items
+            each topicItem in topicItems
+              li.topic__item
+                a.topic__item-link(href=topicItem.url)
+                  .topic__item-img
+                    img(src=topicItem.img, alt=topicItem.alt)
+                  .topic__item-title
+                    h3 #{topicItem.title}
+                  .topic__item-date
+                    time #{topicItem.date}

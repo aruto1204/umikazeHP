@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// guid
+// ================================================================
+.guid {
+  width: 100%;
+  background-color: $color-blue;
+  padding-top: rem(117px);
+  padding-bottom: rem(129px);
+}
+.guid__content {
+  width: 100%;
+}
+.guid__items {
+  display: flex;
+  justify-content: space-between;
+}
+.guid__item {
+  max-width: rem(672px);
+  width: 100%;
+  background-color: $color-green;
+  padding-bottom: rem(33.5px);
+}
+.guid__item-link {
+  width: 100%;
+  height: 100%;
+}
+.guid__item-img {
+  width: 100%;
+}
+.guid__item-title {
+  @include txt(25px, 700, $color-white, center);
+  @include txt-option(1, 0px);
+  margin-top: rem(34px);
+}
+.guid__item-text {
+  @include txt(16px, 700, $color-white, center);
+  @include txt-option(1.687, 0px);
+  margin-top: rem(15.5px);
+}

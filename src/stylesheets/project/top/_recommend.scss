@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// recommend
+// ================================================================
+.recommend {
+  width: 100%;
+  height: rem(1034px);
+  margin-top: rem(237px);
+  padding-top: rem(310px);
+  position: relative;
+}
+.recommend__background {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.recommend__background img {
+  height: 100%;
+}
+
+// ================================================================
+//  recommend_content
+// ================================================================
+.recommend__items {
+  width: 100%;
+  height: rem(460px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommend__item {
+  max-width: rem(404px);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.recommend__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-white;
+  opacity: 0.6;
+  z-index: -1;
+}
+.recommend__item-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(94px);
+}
+.recommend__wrapper {
+  width: 100%;
+  height: auto;
+}
+.recommend__wrapper-eng {
+  @include txt(23px, 500, $color-default-font, center);
+  @include txt-option(1, 0px);
+}
+.recommend__wrapper-title {
+  margin-top: rem(28px);
+  @include txt(45px, 500, $color-default-font, center);
+  @include txt-option(1, 0px);
+}
+.recommend__wrapper-text {
+  margin: 0 auto;
+  margin-top: rem(31px);
+  max-width: rem(294px);
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(3.125, 0px);
+}
+.recommend__wrapper-text span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $color-gray;
+}

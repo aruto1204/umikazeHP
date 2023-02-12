@@ -2,10 +2,26 @@
 -
   const introMain = {
     title: 'ごあいさつ',
-    text: '仮テキスト<br>ああああああああああああああああああああああああああああああああああああああ<br>ああああああああああああああああああああああああああああああああああああああああああああああ',
+    text: 'こんにちは、うみかぜ助産院の院長　菊池邦枝です。<br> 助産院とはお産を取り扱う、赤ちゃんを産む場所だけと思いがちですよね。<br>でもそれだけではないのです。<br>皆様の身体とこころのよりどころ。自分らしい生活を送ることができるよう、胎児期から老年期までの女性の一生涯のサポーターとしてうみかぜ助産院を開業いたしました。<br>大学の教員をしながら、こちらで妊娠・健康に関するご相談や育児相談などを行います。<br>大学では上田邦枝（旧姓）で教員をしています。',
     name: '菊池 邦枝',
     degree: '院長',
-    img: '',
+    img: '../images/01_top/intro_image.png',
+    alt: 'イメージ画像',
+  }
+  const introHistory = {
+    title: '教育歴・職歴',
+    text: '2016 年10 月～現在：昭和大学助産学専攻科及び保健医療学部看護学科教授<br>2018 年4 月～現在：神奈川県助産師会理事<br>2012 年4 月～ 2016 年3 月：昭和大学助産学専攻科准教授<br>2007 年4 月～ 2012 年3 月：昭和大学保健医療学部看護学科及び助産学専攻科専任講師<br>2005 年4 月～ 2007 年3 月：東海大学医療技術短期大学基礎看護学及び成人看護学助手<br>2004 年4 月～ 2005 年3 月：神奈川県立保健福祉大学実践教育センター子ども支援課程技官<br>1994 年4 月～ 2004 年3 月：国家公務員組合連合会横須賀共済病院周産期医療センター助産師',
+  }
+  const introDegree = {
+    title: '学位',
+    text: '2015 年3 月博士（保健科学）、修士（健康心理学）',
+  }
+  const introActivity = {
+    title: '活動内容',
+    lectureTitle: '【講演】',
+    lectureText: '生命教育、ストレスマネジメント教育、生命と性の学習、性の健康講演、性の健康教育講演、危険ドラッグ予防教育、エイズ・性教育など ',
+    otherTitle: '【他】',
+    otherText: '①昭和大学保健医療学部看護学科の教育<br>②昭和大学助産学専攻科の教育<br>③昭和大学保健医療学研究科の教育<br>④神奈川県助産師会<br>　「神奈川県内の災害時の妊産婦・母子支援」 ',
   }
 //intro
 section
@@ -21,6 +37,19 @@ section
                 span.intro__main__content-degree #{introMain.degree}
                 |#{introMain.name}
             .intro__main-img
+              img(src=introMain.img, alt=introMain.alt)
           .intro__history
+            h2.intro__title #{introHistory.title}
+            p.intro__text !{introHistory.text}
           .intro__degree
+            h2.intro__title #{introDegree.title}
+            p.intro__text !{introDegree.text}
           .intro__activity
+            h2.intro__title #{introActivity.title}
+            ul.intro__activity-content
+              li.intro__activity-content__text
+                p #{introActivity.lectureTitle}
+                p !{introActivity.lectureText}
+              li.intro__activity-content__text
+                p #{introActivity.otherTitle}
+                p !{introActivity.otherText}

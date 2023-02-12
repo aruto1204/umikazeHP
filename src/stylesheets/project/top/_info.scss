@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// info
+// ================================================================
+.info {
+  width: 100%;
+  padding-top: rem(145px);
+  padding-bottom: rem(159px);
+}
+.info__content {
+  display: flex;
+  width: 100%;
+  height: rem(364px);
+  background-color: aqua;
+}
+.info__wrapper {
+  max-width: rem(710px);
+  width: 100%;
+  height: 100%;
+}
+.info__wrapper-left {
+  max-width: rem(573.31px);
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.info__wrapper-right {
+  width: 100%;
+  max-width: rem(560px);
+  margin: 0 auto;
+}
+.info__schedule {
+  width: 100%;
+  height: rem(184.9px);
+  background-color: bisque;
+}
+.info__visit {
+  width: 100%;
+  height: rem(45px);
+  margin-top: rem(26.1px);
+  background-color: chartreuse;
+}
+.info__web {
+  width: 100%;
+  height: rem(171px);
+  background-color: cornflowerblue;
+}
+.info__reserve {
+  width: 100%;
+  height: rem(137px);
+  margin-top: rem(56px);
+  background-color: plum;
+}

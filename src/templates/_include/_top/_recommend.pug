@@ -1,0 +1,43 @@
+-//入力内容
+-
+  const recommendImage = {
+    img: '../images/01_top/background-img.png',
+    alt: '背景画像',
+  }
+  const recommendItems = [
+    {
+      url: '',
+      title: '妊活について',
+      eng: 'family planning',
+      text: 'ファミリープランニング',
+    },
+    {
+      url: '',
+      title: '妊娠中について',
+      eng: 'pregnant',
+      text: '妊娠中のマイナートラブル相談<span></span>妊娠中のお産教室<span></span>妊娠中の育児教室',
+    },
+    {
+      url: '',
+      title: '産後について',
+      eng: 'postpartum',
+      text: '産後母乳外来<span></span>産後育児相談<span></span>産後ケア',
+    },
+  ]
+//recommend
+section
+  .recommend
+    .recommend__background
+      img(src=recommendImage.img, alt=recommendImage.alt)
+    .inner-s
+      ul.recommend__items
+        each recommendItem in recommendItems
+          li.recommend__item
+            a(href=recommendItem.url).recommend__item-link
+              .recommend__wrapper
+                .recommend__wrapper-eng
+                  p #{recommendItem.eng}
+                .recommend__wrapper-title
+                  h2 #{recommendItem.title}
+                .recommend__wrapper-text
+                  p !{recommendItem.text}
