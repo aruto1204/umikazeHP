@@ -5,107 +5,94 @@
 // footer
 // ================================================================
 .footer {
+  display: none;
   width: 100%;
+  background-color: $color-blue;
+  margin-top: rem(79px);
+  padding-top: rem(50.5px);
+  padding-bottom: rem(63px);
 }
-.footer__inner {
-  background: #efefef;
-  padding-left: rem(10px);
-  padding-right: rem(40px);
-  padding-top: rem(50px);
-  padding-bottom: rem(60px);
-  @include mq(pc) {
-    padding: 0 rem(150px);
-    padding-top: rem(50px);
-    padding-bottom: rem(60px);
-  }
+.footer__content {
+  border-bottom: 0.5px solid $color-black;
+  padding-bottom: rem(39.38px);
 }
-.footer__content-container {
-  @include mq(mobile) {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-.footer__logo {
-  display: flex;
-  justify-content: center;
-  height: inherit;
-  text-align: center;
-  @include txt(24px, 700, $color-default-font, left);
-  @include txt-option(1.6, 3.6px);
-  @include mq(pc) {
-    margin: 0 auto;
-    @include txt(40px, 700, $color-default-font, left);
-    @include txt-option(1, 6px);
-  }
-}
-
-// ================================================================
-//  footer__menu
-// ================================================================
 .footer__nav {
-  @include mq(pc) {
-    margin-top: rem(40px);
-  }
+  max-width: rem(1062px);
+  width: 100%;
+  margin: 0 auto;
 }
 .footer__items {
-  display: block;
-  width: rem(100px);
-  @include mq(pc) {
-    display: flex;
-    justify-content: center;
-    width: auto;
-  }
+  display: flex;
 }
 .footer__item {
-  position: relative;
-  display: inline-flex;
-}
-.footer__item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: rem(-8px);
+  max-width: rem(177px);
   width: 100%;
-  height: rem(2px);
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: transform 0.3s;
+  text-align: center;
 }
 .footer__item a {
-  @include txt(16px, 400, $color-default-font, left);
-  @include txt-option(1.5, 0px);
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(1.687, 0px);
 }
-.footer__item + .footer__item {
-  @include mq(mobile) {
-    margin-top: rem(20px);
-  }
-  @include mq(pc) {
-    margin-left: rem(30px);
-  }
-}
-@media (hover: hover) {
-  .footer__item:hover::after {
-    transform: scale(1, 1);
-  }
-}
-
-// ================================================================
-//  copyright
-// ================================================================
-.footer__foot {
+.footer__wrapper {
+  display: flex;
+  max-width: rem(1056.46px);
   width: 100%;
-  height: rem(60px);
-  background: #cccccc;
-  padding: 0 rem(10px);
-
+  margin: 0 auto;
+  margin-top: rem(19.5px);
+  padding-left: rem(29.29px);
+}
+.footer__wrapper-img {
+  margin-top: rem(9.71px);
+  max-width: rem(132.1px);
+  width: 100%;
+  max-height: rem(145.29px);
+  height: 100%;
+}
+.footer__wrapper-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.footer__contact {
+  margin-top: rem(8.5px);
+  margin-left: rem(41.35px);
+}
+.footer__contact-text {
+  @include txt(16px, 500, $color-default-font, Left);
+  @include txt-option(1.562, 0px);
+}
+.footer__contact-title {
+  max-width: rem(289px);
+  width: 100%;
+  height: rem(29.32px);
   display: flex;
   align-items: center;
-  @include mq(pc) {
-    padding: 0 rem(150px);
-  }
+  padding-left: rem(8px);
+  margin-top: rem(17px);
+  background-color: $backcolor-green;
+  @include txt(18px, 700, $color-white, Left);
+  @include txt-option(1, 0px);
+}
+.footer__contact-title:nth-of-type(4) {
+  margin-top: rem(27.68px);
+}
+.footer__contact-tel {
+  margin-top: rem(4px);
+  @include txt(35px, 700, $color-default-font, Left);
+  @include txt-option(1, 0px);
+}
+.footer__contact-tel span {
+  @include txt(25px, 700, $color-default-font, Left);
+  @include txt-option(1, 0px);
+}
+.footer__wrapper-map {
+  max-width: rem(416.73px);
+  width: 100%;
+}
+.footer__foot {
+  margin-top: rem(23px);
 }
 .footer__copy {
-  @include txt(13px, 400, $color-default-font, left);
-  @include txt-option(1.46, 0px);
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(1, 0px);
 }

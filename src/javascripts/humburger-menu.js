@@ -6,15 +6,15 @@ const drawerMenu = document.querySelector(".drawer__menu");
 const remove = () => {
   menuBtn.classList.remove("active");
   overlay.classList.remove("active");
-  drawerMenu.classList.remove("active");
+  //drawerMenu.classList.remove("active");
   body.classList.remove("noscroll");
 };
 export default () => {
   menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
     overlay.classList.toggle("active");
-    drawerMenu.classList.toggle("active");
-    body.classList.toggle("noscroll");
+    //drawerMenu.classList.toggle("active");
+    //body.classList.toggle("noscroll");
   });
   console.log(overlay.classList.contains("active"));
 

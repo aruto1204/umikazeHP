@@ -5,6 +5,7 @@
 // topic
 // ================================================================
 .topic {
+  display: none;
   width: 100%;
   margin-top: rem(210px);
 }
@@ -23,6 +24,7 @@
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1, 0px);
   margin-top: rem(12px);
+  font-family: $font-family-YuGothic;
 }
 .topic__content {
   width: 100%;
@@ -59,8 +61,10 @@
 .topic__item-title {
   @include txt(20px, 500, $color-default-font, left);
   @include txt-option(1.7, 0px);
+  font-family: $font-family-YuGothic;
 }
 .topic__item-date {
   @include txt(16px, 500, $color-default-font, left);
   @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
 }

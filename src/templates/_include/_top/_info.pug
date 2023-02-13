@@ -1,29 +1,63 @@
 -//入力内容
-//- -
-//-   const recommendImage = {
-//-     img: '../images/01_top/background-img.png',
-//-     alt: '背景画像',
-//-   }
-//-   const recommendItems = [
-//-     {
-//-       url: '',
-//-       title: '妊活について',
-//-       eng: 'family planning',
-//-       text: 'ファミリープランニング',
-//-     },
-//-     {
-//-       url: '',
-//-       title: '妊娠中について',
-//-       eng: 'pregnant',
-//-       text: '妊娠中のマイナートラブル相談<span></span>妊娠中のお産教室<span></span>妊娠中の育児教室',
-//-     },
-//-     {
-//-       url: '',
-//-       title: '産後について',
-//-       eng: 'postpartum',
-//-       text: '産後母乳外来<span></span>産後育児相談<span></span>産後ケア',
-//-     },
-//-   ]
+-
+  const infoSchedule = {
+    title: '■ 開院スケジュール',
+  }
+  const infoWeeks = [
+    {
+      time: '',
+      mo: '月',
+      tu: '火',
+      we: '水',
+      th: '木',
+      fr: '金',
+      sa: '土',
+      su: '日',
+    },
+    {
+      time: '9時〜12時',
+      mo: '×',
+      tu: '○',
+      we: '×',
+      th: '○',
+      fr: '△',
+      sa: '○',
+      su: '○',
+    },
+    {
+      time: '13時〜17時',
+      mo: '×',
+      tu: '○',
+      we: '×',
+      th: '○',
+      fr: '△',
+      sa: '○',
+      su: '×',
+    },
+    {
+      time: '19時〜21時',
+      mo: '×',
+      tu: '○',
+      we: '×',
+      th: '○',
+      fr: '△',
+      sa: '×',
+      su: '×',
+    },
+  ]
+  const infoVisit = {
+    title: '■ 来院予約方法',
+    text: 'LINE、メールまたはお電話でご予約を受け付けています。',
+  }
+  const infoWeb = {
+    title: '■ web相談',
+    text: '・Web相談はZoomを使用します。<br>・相談予約メールは前日にお送りします。<br>・ZoomミーティングのIDパスワードをお送りします。<br>・Web相談は40分枠での相談で8000円、60分枠でのご相談で14000円です。<br>・事前決済、クレジットカードでのお支払いとなります。',
+  }
+  const infoReserve = {
+    title: '予約時間',
+    time01: '09時~09時40分<br>10時~10時40分<br>11時~11時40分<br>13時~13時40分<br>14時~14時40分',
+    time02: '15時~15時40分<br>16時~16時40分<br>19時~19時40分<br>20時~20時40分<br>予約時間はおおよその目安です。',
+  }
 //info
 section
   .info
@@ -32,8 +66,35 @@ section
         .info__wrapper
           .info__wrapper-left
             .info__schedule
+              .info__schedule-title
+                h3 #{infoSchedule.title}
+              table.info__schedule__wrapper
+                each infoWeek in infoWeeks
+                  tr
+                    th #{infoWeek.time}
+                    td #{infoWeek.mo}
+                    td #{infoWeek.tu}
+                    td #{infoWeek.we}
+                    td #{infoWeek.th}
+                    td #{infoWeek.fr}
+                    td #{infoWeek.sa}
+                    td #{infoWeek.su}
             .info__visit
+              .info__visit-title
+                h3 #{infoVisit.title}
+              .info__visit-text
+                p #{infoVisit.text}
         .info__wrapper
           .info__wrapper-right
             .info__web
+              .info__web-title
+                h3 #{infoWeb.title}
+              .info__web-text
+                p !{infoWeb.text}
             .info__reserve
+              .info__reserve-title
+                h3 #{infoReserve.title}
+              .info__reserve-text
+                p !{infoReserve.time01}
+              .info__reserve-text
+                p !{infoReserve.time02}

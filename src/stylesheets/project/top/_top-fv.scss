@@ -9,11 +9,28 @@
   overflow: hidden;
   position: relative;
 }
-.top-fv__icon {
+.top-fv__content {
   position: absolute;
-  width: toVw(246.1);
-  height: toVw(268.8);
-  top: toVw(179);
+  display: flex;
+  top: rem(129px);
   left: toVw(191);
   z-index: 5;
+  @include mq(sp-tb) {
+    top: rem(179px);
+  }
+}
+.top-fv__icon {
+  width: toVw(246.1);
+  height: toVw(268.8);
+  top: rem(129px);
+  left: toVw(191);
+  @include mq(sp-tb) {
+    top: rem(179px);
+  }
+}
+.top-fv__title {
+  margin-left: rem(14.9px);
+  padding-top: toVw(97);
+  @include txt(37px, 500, $color-default-font, left);
+  @include txt-option(1, 0px);
 }

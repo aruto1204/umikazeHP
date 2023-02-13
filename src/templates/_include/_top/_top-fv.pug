@@ -3,6 +3,7 @@
   const topIcon = {
     img: '../images/01_top/umikaze_icon.png',
     alt: 'umikaze_icon',
+    text: '逗子で、太陽のようないのち、育もう',
   }
   const slideItems = [
     {
@@ -26,8 +27,11 @@
   ]
 //top-fv
 .top-fv
-  .top-fv__icon
-    img(src=topIcon.img, alt=topIcon.alt)
+  .top-fv__content
+    .top-fv__icon
+      img(src=topIcon.img, alt=topIcon.alt)
+    .top-fv__title
+      h2 #{topIcon.text}
   .top-fv__content-container
     .swiper
       ul.swiper-wrapper

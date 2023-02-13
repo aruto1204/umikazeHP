@@ -5,6 +5,7 @@
 // recommend
 // ================================================================
 .recommend {
+  display: none;
   width: 100%;
   height: rem(1034px);
   margin-top: rem(237px);
@@ -77,6 +78,7 @@
   max-width: rem(294px);
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(3.125, 0px);
+  font-family: $font-family-YuGothic;
 }
 .recommend__wrapper-text span {
   display: block;

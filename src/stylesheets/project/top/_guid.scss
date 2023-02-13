@@ -5,6 +5,7 @@
 // guid
 // ================================================================
 .guid {
+  display: none;
   width: 100%;
   background-color: $color-blue;
   padding-top: rem(117px);
@@ -34,9 +35,11 @@
   @include txt(25px, 700, $color-white, center);
   @include txt-option(1, 0px);
   margin-top: rem(34px);
+  font-family: $font-family-Helvetica;
 }
 .guid__item-text {
   @include txt(16px, 700, $color-white, center);
   @include txt-option(1.687, 0px);
   margin-top: rem(15.5px);
+  font-family: $font-family-YuGothic;
 }

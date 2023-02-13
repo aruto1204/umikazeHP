@@ -5,15 +5,15 @@
 // info
 // ================================================================
 .info {
+  display: none;
   width: 100%;
   padding-top: rem(145px);
   padding-bottom: rem(159px);
+  font-family: $font-family-YuGothic;
 }
 .info__content {
   display: flex;
   width: 100%;
-  height: rem(364px);
-  background-color: aqua;
 }
 .info__wrapper {
   max-width: rem(710px);
@@ -24,32 +24,101 @@
   max-width: rem(573.31px);
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  padding-left: rem(55.69px);
 }
 .info__wrapper-right {
   width: 100%;
-  max-width: rem(560px);
-  margin: 0 auto;
+  padding-left: rem(84.5px);
+  border-left: 1px solid $color-gray;
 }
+
+// ================================================================
+//  schedule
+// ================================================================
 .info__schedule {
   width: 100%;
   height: rem(184.9px);
-  background-color: bisque;
 }
+.info__schedule-title {
+  @include txt(20px, 500, $color-default-font, left);
+  @include txt-option(1, 0px);
+}
+.info__schedule__wrapper {
+  width: 100%;
+  height: rem(149.53px);
+  margin-top: rem(15.37px);
+  border-collapse: collapse;
+  @include txt(18px, 500, $color-blacksub, center);
+  @include txt-option(1, 0px);
+}
+.info__schedule__wrapper th,
+td {
+  border: solid 1px;
+  vertical-align: middle;
+}
+.info__schedule__wrapper th {
+  width: rem(136.06px);
+  background-color: $color-blue;
+}
+.info__schedule__wrapper tr:nth-child(1) th {
+  background-color: transparent;
+}
+
+// ================================================================
+//  visit
+// ================================================================
 .info__visit {
   width: 100%;
-  height: rem(45px);
-  margin-top: rem(26.1px);
-  background-color: chartreuse;
+  margin-top: rem(19.1px);
 }
+.info__visit-title {
+  @include txt(20px, 500, $color-default-font, left);
+  @include txt-option(1.7, 0px);
+}
+.info__visit-text {
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(2.187, 0px);
+  padding-left: rem(24px);
+}
+
+// ================================================================
+//  web
+// ================================================================
 .info__web {
   width: 100%;
-  height: rem(171px);
-  background-color: cornflowerblue;
 }
+.info__web-title {
+  @include txt(20px, 500, $color-default-font, left);
+  @include txt-option(1.7, 0px);
+}
+.info__web-text {
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(2.187, 0px);
+  padding-left: rem(14px);
+}
+
+// ================================================================
+//  reserve
+// ================================================================
 .info__reserve {
   width: 100%;
-  height: rem(137px);
   margin-top: rem(56px);
-  background-color: plum;
+  padding-left: rem(14px);
+  display: flex;
+}
+.info__reserve-title {
+  background-color: $color-blue;
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(1, 0px);
+  padding-top: rem(8px);
+  padding-left: rem(14px);
+  padding-right: rem(21px);
+  margin-right: rem(21px);
+}
+.info__reserve-text {
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(1.875, 0px);
+}
+.info__reserve-text + .info__reserve-text {
+  margin-left: rem(40px);
 }

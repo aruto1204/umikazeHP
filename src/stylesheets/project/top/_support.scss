@@ -5,6 +5,7 @@
 // support
 // ================================================================
 .support {
+  display: none;
   margin-top: rem(118.93px);
   width: 100%;
   font-family: $font-family-YuMincho;
@@ -20,6 +21,7 @@
   @include txt(20px, 500, $color-default-font, center);
   @include txt-option(1, 0px);
   margin-top: rem(3px);
+  font-family: $font-family-YuGothic;
 }
 .support__title {
   margin-top: rem(27px);
@@ -86,6 +88,7 @@
   margin-top: rem(30px);
   @include txt(16px, 500, $color-default-font, left);
   @include txt-option(1.93, 0px);
+  font-family: $font-family-YuGothic;
 }
 .support__item-img {
   position: absolute;

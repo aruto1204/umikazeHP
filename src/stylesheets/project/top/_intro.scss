@@ -5,10 +5,10 @@
 // intro
 // ================================================================
 .intro {
+  display: none;
   width: 100%;
   height: auto;
   margin-top: rem(153px);
-  font-family: $font-family-YuMincho;
 }
 .intro__area {
   width: 100%;
@@ -77,7 +77,7 @@
 .intro__title {
   width: 100%;
   height: rem(36px);
-  background-color: $backcolor-green;
+  background-color: $color-green;
   display: flex;
   align-items: center;
   @include txt(23px, 500, $color-white, left);

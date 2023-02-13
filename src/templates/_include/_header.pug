@@ -18,7 +18,8 @@
       url: "",
     },
     {
-      name: "さまざまな年代の女性を対象にした各教室のご案内",
+      //name: "さまざまな年代の女性を対象にした各教室のご案内",
+      name: "各教室のご案内",
       url: "",
     },
     {
@@ -28,6 +29,10 @@
   ]
   const navTopic = {
         name: "TOPIC<br>最新情報",
+        url: "",
+  }
+  const navWeb = {
+        name: "webでの<br>お問い合わせ",
         url: "",
   }
   const navReserve = {
@@ -54,6 +59,8 @@ header.header
     .header__link
       .header__topic
         a(href=navTopic.url class="link-btn") !{navTopic.name}
+      .header__web
+        a(href=navWeb.url class="link-btn") !{navWeb.name}
       .header__wrapper
         .header__reserve
           a(href=navReserve.url class="link-btn") !{navReserve.name}
@@ -62,3 +69,8 @@ header.header
       .header__instagram
         a(href=navInstagram.url)
           img(src=navInstagram.icon, alt="")
+          //hamburger menu
+    .header__drawer
+      - for (var i = 0; i < 3; i++)
+        span.header__drawer-line
+    .header__overlay
