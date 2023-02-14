@@ -5,7 +5,6 @@
 // support
 // ================================================================
 .support {
-  display: none;
   margin-top: rem(118.93px);
   width: 100%;
   font-family: $font-family-YuMincho;
@@ -60,18 +59,36 @@
 // ================================================================
 .support__wrapper {
   width: 100%;
-  margin-top: rem(25px);
+  margin-top: rem(60px);
+  @include mq(sp-tb) {
+    margin-top: rem(25px);
+  }
 }
 .support__items {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  @include mq(sp-tb) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .support__item {
-  max-width: rem(404px);
+  max-width: rem(600px);
   width: 100%;
-  min-height: rem(657px);
+  min-height: rem(800px);
+  margin: 0 auto;
   background-color: $color-blue;
   position: relative;
+  @include mq(sp-tb) {
+    min-height: rem(657px);
+    max-width: rem(404px);
+    width: 31%;
+  }
+}
+.support__item + .support__item {
+  margin-top: rem(40px);
+  @include mq(sp-tb) {
+    margin-top: auto;
+  }
 }
 .support__item-title {
   width: 100%;

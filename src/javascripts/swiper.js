@@ -12,7 +12,7 @@ export default () => {
     // ページネーションが必要なら追加
     breakpoints: {
       768: {
-        slidesPerView: 1.0958,
+        slidesPerView: 1.1059,
       },
     },
     pagination: {

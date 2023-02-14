@@ -31,6 +31,14 @@
     display: inline-block !important;
   }
 }
+//width: 567px以下だけ表示
+.utils-hidden-sp-s {
+  display: none !important;
+
+  @include mq(sp-s) {
+    display: block !important;
+  }
+}
 .utils-block-hidden-pc {
   @include mq(pc) {
     display: none !important;

@@ -7,15 +7,15 @@ $breakpoints: (
   "sp-s": "screen and (max-width: 567px)",
   "sp-m": "screen and (min-width: 568px) and (max-width: 767px)",
   "tb": "screen and (min-width: 768px) and (max-width: 1024px)",
-  "pc-s": "screen and (min-width: 1025px) and (max-width: 1840px)",
-  "pc-l": "screen and (min-width: 1841px)",
-
+  "tb-pc": "screen and (min-width: 1025px) and (max-width: 1280px)",
+  "pc-s": "screen and (min-width: 1281px)",
+  //"pc-l": "screen and (min-width: 1841px)",
   // モバイル（スマホ＆タブレット）の表示
-  "mobile": "screen and (max-width: 767px)",
+  "mobile": "screen and (min-width: 767px)",
   // PC（PC）の表示
   "pc": "screen and (min-width: 768px)",
   //タブレット以上の表示
   "sp-tb": "screen and (min-width: 1024px)",
   //タブレット以上の表示
-  "pc-m": "screen and (min-width: 1280px)",
+  "pc-m": "screen and (min-width: 1281px)",
 ) !default;

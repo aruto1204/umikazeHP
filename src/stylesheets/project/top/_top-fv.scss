@@ -15,15 +15,23 @@
   top: rem(129px);
   left: toVw(191);
   z-index: 5;
+  @include mq(sp-s) {
+    top: rem(110px);
+    left: toVw(100);
+  }
   @include mq(sp-tb) {
     top: rem(179px);
   }
 }
 .top-fv__icon {
-  width: toVw(246.1);
+  width: max(toVw(246.1), 65px);
   height: toVw(268.8);
   top: rem(129px);
   left: toVw(191);
+  @include mq(sp-s) {
+    top: rem(110px);
+    left: toVw(100);
+  }
   @include mq(sp-tb) {
     top: rem(179px);
   }
@@ -31,6 +39,22 @@
 .top-fv__title {
   margin-left: rem(14.9px);
   padding-top: toVw(97);
-  @include txt(37px, 500, $color-default-font, left);
+  @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1, 0px);
+  @include mq(sp-s) {
+    padding-top: toVw(20, 567);
+    margin-left: rem(10px);
+  }
+  @include mq(sp-m) {
+    font-size: 20px;
+  }
+  @include mq(tb) {
+    font-size: 24px;
+  }
+  @include mq(tb-pc) {
+    font-size: 28px;
+  }
+  @include mq(pc-s) {
+    font-size: 37px;
+  }
 }

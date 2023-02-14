@@ -3,7 +3,7 @@
   const topIcon = {
     img: '../images/01_top/umikaze_icon.png',
     alt: 'umikaze_icon',
-    text: '逗子で、太陽のようないのち、育もう',
+    title: '逗子で、太陽のような<br class="utils-hidden-sp-s">いのち、育もう',
   }
   const slideItems = [
     {
@@ -31,7 +31,7 @@
     .top-fv__icon
       img(src=topIcon.img, alt=topIcon.alt)
     .top-fv__title
-      h2 #{topIcon.text}
+      h2 !{topIcon.title}
   .top-fv__content-container
     .swiper
       ul.swiper-wrapper
@@ -39,3 +39,5 @@
           li.swiper-slide
             img(src=slideItem.img, alt=slideItem.alt)
       .swiper-pagination
+  //- <p>画面サイズ：<span id="ScrSize"></span></p>
+  //- <p>ウィンドウサイズ：<span id="WinSize"></span></p>

@@ -5,7 +5,6 @@
 // intro
 // ================================================================
 .intro {
-  display: none;
   width: 100%;
   height: auto;
   margin-top: rem(153px);
@@ -18,48 +17,85 @@
 .intro__wrapper {
   width: inherit;
   height: inherit;
-  padding-top: toVw(107);
-  padding-bottom: toVw(93);
-  padding-left: toVw(188);
-  padding-right: toVw(178);
+  padding-top: rem(107px);
+  padding-bottom: rem(93px);
+
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+  @include mq(sp-m) {
+    padding-left: rem(40px);
+    padding-right: rem(40px);
+  }
+  @include mq(pc) {
+    padding-left: rem(60px);
+    padding-right: rem(60px);
+  }
+  @include mq(pc-m) {
+    padding-left: toVw(188);
+    padding-right: toVw(178);
+  }
 }
 
 // ================================================================
 //  intro__main
 // ================================================================
 .intro__main {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  @include mq(sp-tb) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .intro__main__content {
   width: 100%;
-  max-width: toVw(799);
+  max-width: rem(799px);
 }
 .intro__main__content-title {
   @include txt(35px, 500, $color-default-font, left);
   @include txt-option(1.514, 0px);
+  @include mq(sp-s) {
+    font-size: rem(28px);
+  }
 }
 .intro__main__content-text {
   margin-top: rem(22px);
   @include txt(23px, 500, $color-default-font, left);
   @include txt-option(1.739, 0px);
+  @include mq(sp-s) {
+    font-size: rem(16px);
+  }
 }
 .intro__main__content-name {
   margin-top: rem(46px);
   margin-left: auto;
   @include txt(23px, 500, $color-default-font, right);
   @include txt-option(1.739, 0px);
+  @include mq(sp-s) {
+    font-size: rem(16px);
+  }
 }
 .intro__main__content-degree {
   margin-right: 10px;
   @include txt(16px, 500, $color-default-font, right);
   @include txt-option(1.687, 0px);
+  @include mq(sp-s) {
+    font-size: rem(14px);
+  }
 }
 .intro__main-img {
-  width: toVw(362);
+  min-width: auto;
+  max-width: rem(362px);
   aspect-ratio: 1/1;
-  margin-left: 12px;
-  margin-top: auto;
+  margin: 0 auto;
+  margin-top: rem(80px);
+  @include mq(sp-s) {
+    padding: 0 rem(20px);
+  }
+  @include mq(sp-tb) {
+    min-width: rem(362px);
+    margin-left: 12px;
+    margin-top: auto;
+  }
 }
 
 // ================================================================
@@ -83,17 +119,26 @@
   @include txt(23px, 500, $color-white, left);
   @include txt-option(1.739, 0px);
   padding-left: rem(16px);
+  @include mq(sp-s) {
+    font-size: 20px;
+  }
 }
 .intro__text {
   @include txt(23px, 500, $color-default-font, left);
   @include txt-option(1.739, 0px);
   margin-top: rem(22px);
+  @include mq(sp-s) {
+    font-size: 16px;
+  }
 }
 .intro__activity-content {
   margin-top: rem(22px);
   width: 100%;
   @include txt(23px, 500, $color-default-font, left);
   @include txt-option(1.739, 0px);
+  @include mq(sp-s) {
+    font-size: 16px;
+  }
 }
 .intro__activity-content__text {
   display: flex;
