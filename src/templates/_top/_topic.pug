@@ -45,7 +45,7 @@ section
           p #{topicContent.text}
         .topic__content
           ul.topic__items
-            each topicItem in topicItems
+            each topicItem, index in topicItems
               li.topic__item
                 a.topic__item-link(href=topicItem.url)
                   .topic__item-img
@@ -54,3 +54,5 @@ section
                     h3 #{topicItem.title}
                   .topic__item-date
                     time #{topicItem.date}
+              if index < 3
+               li.topic__item-line

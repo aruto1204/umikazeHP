@@ -5,7 +5,6 @@
 // footer
 // ================================================================
 .footer {
-  display: none;
   width: 100%;
   background-color: $color-blue;
   margin-top: rem(79px);
@@ -15,38 +14,67 @@
 .footer__content {
   border-bottom: 0.5px solid $color-black;
   padding-bottom: rem(39.38px);
+  position: relative;
 }
+
+// ================================================================
+//  footer__nav
+// ================================================================
 .footer__nav {
-  max-width: rem(1062px);
+  max-width: rem(400px);
   width: 100%;
   margin: 0 auto;
+  @include mq(sp-tb) {
+    max-width: rem(1062px);
+  }
 }
 .footer__items {
-  display: flex;
+  display: block;
+  @include mq(sp-tb) {
+    display: flex;
+  }
 }
 .footer__item {
-  max-width: rem(177px);
+  max-width: rem(120px);
   width: 100%;
-  text-align: center;
+  margin-left: auto;
+  @include mq(sp-tb) {
+    max-width: rem(177px);
+    margin: 0;
+    text-align: center;
+  }
 }
 .footer__item a {
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1.687, 0px);
 }
+
+// ================================================================
+//  footer__wrapper
+// ================================================================
 .footer__wrapper {
-  display: flex;
-  max-width: rem(1056.46px);
+  max-width: rem(400px);
   width: 100%;
   margin: 0 auto;
   margin-top: rem(19.5px);
-  padding-left: rem(29.29px);
+  @include mq(sp-tb) {
+    display: flex;
+    max-width: rem(1056.46px);
+    padding-left: rem(29.29px);
+    padding-right: rem(29.29px);
+  }
 }
 .footer__wrapper-img {
-  margin-top: rem(9.71px);
   max-width: rem(132.1px);
   width: 100%;
   max-height: rem(145.29px);
   height: 100%;
+  position: absolute;
+  top: 0;
+  @include mq(sp-tb) {
+    position: initial;
+    margin-top: rem(9.71px);
+  }
 }
 .footer__wrapper-img a {
   display: block;
@@ -54,15 +82,25 @@
   height: 100%;
 }
 .footer__contact {
-  margin-top: rem(8.5px);
-  margin-left: rem(41.35px);
+  margin: 0 auto;
+  margin-top: rem(50px);
+  @include mq(sp-tb) {
+    margin-top: rem(8.5px);
+    margin-left: rem(20px);
+    margin-right: rem(20px);
+  }
+  @include mq(pc-m) {
+    margin-left: rem(41.35px);
+  }
 }
 .footer__contact-text {
   @include txt(16px, 500, $color-default-font, Left);
   @include txt-option(1.562, 0px);
 }
+.footer__contact-text p:nth-of-type(2) {
+  padding-left: rem(16px);
+}
 .footer__contact-title {
-  max-width: rem(289px);
   width: 100%;
   height: rem(29.32px);
   display: flex;
@@ -72,6 +110,9 @@
   background-color: $backcolor-green;
   @include txt(18px, 700, $color-white, Left);
   @include txt-option(1, 0px);
+  @include mq(sp-tb) {
+    max-width: rem(289px);
+  }
 }
 .footer__contact-title:nth-of-type(4) {
   margin-top: rem(27.68px);
@@ -80,15 +121,36 @@
   margin-top: rem(4px);
   @include txt(35px, 700, $color-default-font, Left);
   @include txt-option(1, 0px);
+  @include mq(sp-s) {
+    font-size: 28px;
+  }
 }
 .footer__contact-tel span {
   @include txt(25px, 700, $color-default-font, Left);
   @include txt-option(1, 0px);
+  @include mq(sp-s) {
+    font-size: 20px;
+  }
 }
 .footer__wrapper-map {
-  max-width: rem(416.73px);
+  max-width: rem(308.73px);
+  max-height: rem(189.38px);
   width: 100%;
+  margin: 0 auto;
+  margin-top: rem(50px);
+  @include mq(sp-tb) {
+    margin-top: rem(16px);
+  }
+  @include mq(pc-m) {
+    margin-top: rem(16px);
+    margin-right: rem(32.71px);
+    margin-left: auto;
+  }
 }
+
+// ================================================================
+//  footer__foot
+// ================================================================
 .footer__foot {
   margin-top: rem(23px);
 }

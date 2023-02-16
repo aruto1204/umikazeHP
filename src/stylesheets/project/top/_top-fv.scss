@@ -24,6 +24,7 @@
   }
 }
 .top-fv__icon {
+  display: none;
   width: max(toVw(246.1), 65px);
   height: toVw(268.8);
   top: rem(129px);
@@ -33,6 +34,7 @@
     left: toVw(100);
   }
   @include mq(sp-tb) {
+    display: block;
     top: rem(179px);
   }
 }
@@ -42,7 +44,8 @@
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1, 0px);
   @include mq(sp-s) {
-    padding-top: toVw(20, 567);
+    //padding-top: toVw(20, 567);
+    padding-top: 22px;
     margin-left: rem(10px);
   }
   @include mq(sp-m) {

@@ -24,13 +24,21 @@
   margin: 0 auto;
   margin-top: rem(50px);
   padding: 0 rem(20px);
-  justify-content: space-between;
   position: relative;
   @include mq(pc-m) {
-    padding: 0 rem(40px);
+    padding: 0 rem(20px);
   }
   @include mq(sp-tb) {
     height: rem(74px);
+  }
+}
+.header__icon {
+  display: block;
+  width: rem(70px);
+  position: absolute;
+  top: rem(-40px);
+  @include mq(sp-tb) {
+    display: none;
   }
 }
 
@@ -42,10 +50,11 @@
   @include mq(sp-tb) {
     display: block;
     width: 100%;
+    max-width: rem(1081px);
+    margin-left: auto;
   }
 }
 .header__items {
-  max-width: rem(820px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -54,16 +63,29 @@
 .header__item {
   display: flex;
   justify-content: center;
+  min-width: rem(100px);
   @include mq(pc-m) {
-    width: rem(120px);
-    width: 100%;
+    min-width: rem(120px);
   }
 }
-// .header__item:nth-child(5) {
-//   max-width: rem(381px);
-//   width: 100%;
-//   white-space: nowrap;
-// }
+.header__item:nth-child(1) {
+  min-width: rem(40px);
+  @include mq(pc-m) {
+    min-width: rem(120px);
+  }
+}
+.header__item:nth-child(3) {
+  min-width: rem(114px);
+  @include mq(pc-m) {
+    min-width: rem(120px);
+  }
+}
+.header__item:nth-child(5) {
+  min-width: rem(128px);
+  @include mq(pc-w) {
+    width: rem(381px);
+  }
+}
 
 .header__item a {
   @include txt(16px, 500, $color-default-font, center);
@@ -78,15 +100,19 @@
   @include mq(sp-tb) {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     height: 100%;
     max-width: rem(406px);
+    min-width: rem(406px);
     margin-left: rem(10px);
   }
   @include mq(pc-m) {
     margin-left: rem(20px);
     max-width: rem(495px);
+    min-width: rem(495px);
     justify-content: start;
+  }
+  @include mq(pc-w) {
+    margin-left: rem(51px);
   }
 }
 .header__topic {

@@ -1,5 +1,9 @@
 -//ナビメニューの項目
 -
+  const navIcon = {
+    img: '../images/00_common/umikaze_icon.png',
+    alt: 'umikaze_icon',
+  }
   const navItems = [
     {
       name: "TOP",
@@ -18,8 +22,8 @@
       url: "",
     },
     {
-      //name: "さまざまな年代の女性を対象にした各教室のご案内",
-      name: "各教室のご案内",
+      name: "さまざまな年代の女性を対象にした各教室のご案内",
+      //name: "各教室のご案内",
       url: "",
     },
     {
@@ -51,6 +55,8 @@
 //header
 header.header
   .header__inner
+    .header__icon
+      img(src=navIcon.img, alt=navIcon.alt)
     nav.header__nav
       ul.header__items
         each navItem in navItems

@@ -12,10 +12,15 @@ $breakpoints: (
   //"pc-l": "screen and (min-width: 1841px)",
   // モバイル（スマホ＆タブレット）の表示
   "mobile": "screen and (min-width: 767px)",
+  // モバイルサイズ以下を表示
+  "sp": "screen and (max-width: 766px)",
   // PC（PC）の表示
   "pc": "screen and (min-width: 768px)",
   //タブレット以上の表示
   "sp-tb": "screen and (min-width: 1024px)",
   //タブレット以上の表示
   "pc-m": "screen and (min-width: 1281px)",
+
+  //1600px以上
+  "pc-w": "screen and (min-width: 1600px)",
 ) !default;

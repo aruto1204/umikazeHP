@@ -26,11 +26,12 @@
         icon: "../images/00_common/footer_icon.png",
         iconAlt: "フッターアイコン",
         url: "/",
-        map: "../images/00_common/footer_map.png",
+        map: "../images/00_common/footer_map.jpg",
         mapAlt: "地図画像",
   }
   const footerContact = {
-    text: "住所／神奈川県逗子市逗子5丁目2−50 <br>■電車ご利用の方 <br>　JR逗子駅東口より徒歩3分 <br>　京急逗子・葉山駅より徒歩3分 ■お車でご来院の方 <br>　横浜銀行逗子支店隣のコインパーキングをご利用下さい。 <br>　コインパーキング徒歩0分",
+    text01: "住所／神奈川県逗子市逗子5丁目2−50 <br>■電車ご利用の方",
+    text02: "JR逗子駅東口より徒歩3分<br>京急逗子・葉山駅より徒歩3分 ■お車でご来院の方<br>横浜銀行逗子支店隣のコインパーキングをご利用下さい。<br>コインパーキング徒歩0分",
     tel: "お電話でのお問い合わせ",
     number: "<span>TEL</span> 046-876-1124",
     web: "webでのお問い合わせ",
@@ -53,7 +54,8 @@ footer.footer
             img(src=footerItems.icon, alt=footerItems.iconAlt)
         .footer__contact
           .footer__contact-text
-            p !{footerContact.text}
+            p !{footerContact.text01}
+            p !{footerContact.text02}
           .footer__contact-title
             h3 !{footerContact.tel}
           .footer__contact-tel

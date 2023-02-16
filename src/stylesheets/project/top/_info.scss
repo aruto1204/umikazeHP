@@ -5,31 +5,53 @@
 // info
 // ================================================================
 .info {
-  display: none;
   width: 100%;
   padding-top: rem(145px);
   padding-bottom: rem(159px);
   font-family: $font-family-YuGothic;
 }
 .info__content {
-  display: flex;
+  display: block;
   width: 100%;
+  @include mq(pc-m) {
+    display: flex;
+  }
 }
 .info__wrapper {
   max-width: rem(710px);
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+  @include mq(pc-m) {
+    margin: 0;
+  }
+}
+.info__wrapper-line {
+  display: block;
+  @include mq(pc-m) {
+    display: block;
+    border-right: 1px solid $color-gray;
+  }
 }
 .info__wrapper-left {
   max-width: rem(573.31px);
   width: 100%;
   height: 100%;
-  padding-left: rem(55.69px);
+  margin: 0 auto;
+  @include mq(pc-m) {
+    padding-right: rem(20px);
+    padding-left: rem(55.69px);
+  }
 }
 .info__wrapper-right {
+  max-width: rem(584px);
   width: 100%;
-  padding-left: rem(84.5px);
-  border-left: 1px solid $color-gray;
+  margin: 0 auto;
+  @include mq(pc-m) {
+    margin-left: auto;
+    padding-left: rem(20px);
+    margin-right: rem(60px);
+  }
 }
 
 // ================================================================
@@ -50,6 +72,10 @@
   border-collapse: collapse;
   @include txt(18px, 500, $color-blacksub, center);
   @include txt-option(1, 0px);
+  @include mq(sp-s) {
+    height: 120px;
+    font-size: 16px;
+  }
 }
 .info__schedule__wrapper th,
 td {
@@ -59,6 +85,9 @@ td {
 .info__schedule__wrapper th {
   width: rem(136.06px);
   background-color: $color-blue;
+  @include mq(sp-s) {
+    width: rem(90px);
+  }
 }
 .info__schedule__wrapper tr:nth-child(1) th {
   background-color: transparent;
@@ -86,6 +115,10 @@ td {
 // ================================================================
 .info__web {
   width: 100%;
+  margin-top: rem(19.1px);
+  @include mq(pc-m) {
+    margin-top: 0;
+  }
 }
 .info__web-title {
   @include txt(20px, 500, $color-default-font, left);
@@ -101,10 +134,15 @@ td {
 //  reserve
 // ================================================================
 .info__reserve {
+  display: flex;
   width: 100%;
   margin-top: rem(56px);
-  padding-left: rem(14px);
-  display: flex;
+  @include mq(pc-m) {
+    padding-left: rem(14px);
+  }
+  @include mq(sp-s) {
+    display: block;
+  }
 }
 .info__reserve-title {
   background-color: $color-blue;
@@ -114,11 +152,37 @@ td {
   padding-left: rem(14px);
   padding-right: rem(21px);
   margin-right: rem(21px);
+  @include mq(sp-m) {
+    padding-left: rem(10px);
+    padding-right: rem(10px);
+    margin-right: rem(20px);
+  }
+  @include mq(sp-s) {
+    width: 100%;
+    margin: 0;
+    padding-bottom: rem(8px);
+  }
 }
 .info__reserve-text {
   @include txt(16px, 500, $color-default-font, left);
   @include txt-option(1.875, 0px);
+  min-width: rem(113px);
+  @include mq(sp-s) {
+    margin-left: rem(14px);
+    margin-top: rem(10px);
+  }
 }
+.info__reserve-text:nth-of-type(3) {
+  min-width: rem(240px);
+  margin-top: 0;
+}
+
 .info__reserve-text + .info__reserve-text {
   margin-left: rem(40px);
+  @include mq(sp-m) {
+    margin-left: rem(20px);
+  }
+  @include mq(sp-s) {
+    margin-left: rem(14px);
+  }
 }

@@ -16,7 +16,6 @@ export default () => {
     //drawerMenu.classList.toggle("active");
     //body.classList.toggle("noscroll");
   });
-  console.log(overlay.classList.contains("active"));
 
   overlay.addEventListener("click", () => {
     if (overlay.classList.contains("active")) {

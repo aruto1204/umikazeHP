@@ -5,16 +5,20 @@
 // topic
 // ================================================================
 .topic {
-  display: none;
   width: 100%;
   margin-top: rem(210px);
 }
 .topic__area {
   width: 100%;
-  padding: 0 rem(40px);
+  height: 100%;
+  padding: 0 rem(20px);
   padding-top: rem(37px);
   padding-bottom: rem(45px);
   background-color: $color-blue;
+  @include mq(pc-m) {
+    padding-left: rem(40px);
+    padding-right: rem(40px);
+  }
 }
 .topic__title {
   @include txt(30px, 500, $color-default-font, center);
@@ -28,29 +32,39 @@
 }
 .topic__content {
   width: 100%;
+  height: 100%;
   margin-top: rem(38px);
 }
 .topic__items {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   width: 100%;
+  height: 100%;
+  @include mq(sp-tb) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .topic__item {
-  width: 100%;
-  max-width: rem(285px);
   position: relative;
+  max-width: rem(600px);
+  margin: 0 auto;
+  @include mq(sp-tb) {
+    width: 21.2%;
+    max-width: rem(285px);
+  }
 }
-.topic__item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: toVw(-32.5);
-  width: rem(1px);
-  height: 100%;
-  background-color: $color-gray;
-}
-.topic__item:nth-last-child(1):after {
+.topic__item-line {
   display: none;
+  @include mq(sp-tb) {
+    display: block;
+    border-right: 1px solid $color-gray;
+  }
+}
+.topic__item-line + .topic__item {
+  margin-top: rem(40px);
+  @include mq(sp-tb) {
+    margin-top: 0;
+  }
 }
 .topic__item-link {
   width: 100%;

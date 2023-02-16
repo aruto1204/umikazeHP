@@ -1,25 +1,28 @@
 -// 制作実績の画像とURL
 -
   const topIcon = {
-    img: '../images/01_top/umikaze_icon.png',
+    img: '../images/00_common/umikaze_icon.png',
     alt: 'umikaze_icon',
-    title: '逗子で、太陽のような<br class="utils-hidden-sp-s">いのち、育もう',
+    title: '逗子で、太陽のような-<br class="utils-hidden-sp-s">いのち、育もう',
   }
   const slideItems = [
     {
       class: 'test-slide01',
+      srcset: '../images/01_top/top-fv_slide01_sp.png',
       img: '../images/01_top/top-fv_slide01.png',
       alt: 'top-fv_slide',
       link: '',
     },
     {
       class: 'test-slide02',
+      srcset: '../images/01_top/top-fv_slide02_sp.png',
       img: '../images/01_top/top-fv_slide02.png',
       alt: 'top-fv_slide',
       link: '',
     },
     {
       class: 'test-slide03',
+      srcset: '../images/01_top/top-fv_slide03_sp.png',
       img: '../images/01_top/top-fv_slide03.png',
       alt: 'top-fv_slide',
       link: '',
@@ -37,7 +40,9 @@
       ul.swiper-wrapper
         each slideItem in slideItems
           li.swiper-slide
-            img(src=slideItem.img, alt=slideItem.alt)
+            picture
+              source(srcset=slideItem.srcset media="(max-width: 767px)")
+              img(src=slideItem.img alt=slideItem.alt)
       .swiper-pagination
   //- <p>画面サイズ：<span id="ScrSize"></span></p>
   //- <p>ウィンドウサイズ：<span id="WinSize"></span></p>

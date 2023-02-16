@@ -29,12 +29,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include mq(sp-s) {
+    display: block;
+    font-size: 32px;
+  }
 }
 .support__title-logo {
+  width: rem(66.563px);
   @include txt(45px, 500, $color-white, center);
   @include txt-option(1, 0px);
   margin-left: rem(17px);
   position: relative;
+  @include mq(sp-s) {
+    display: block;
+    margin: 0 auto;
+    margin-top: rem(20px);
+  }
 }
 .support__title-logo::before,
 .support__title-logo::after {
@@ -74,14 +84,18 @@
 .support__item {
   max-width: rem(600px);
   width: 100%;
-  min-height: rem(800px);
   margin: 0 auto;
   background-color: $color-blue;
   position: relative;
+  height: auto;
+  @include mq(tb) {
+    min-height: rem(800px);
+  }
   @include mq(sp-tb) {
     min-height: rem(657px);
     max-width: rem(404px);
     width: 31%;
+    margin: 0;
   }
 }
 .support__item + .support__item {
@@ -92,24 +106,38 @@
 }
 .support__item-title {
   width: 100%;
-  height: rem(140px);
+  height: rem(100px);
   background-color: $color-green;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include txt(45px, 500, $color-white, center);
+  @include txt(35px, 500, $color-white, center);
   @include txt-option(1.17, 0px);
+  @include mq(pc) {
+    height: rem(140px);
+    font-size: 45px;
+  }
 }
 .support__item-text {
-  margin: 0 rem(40px);
+  margin: 0 rem(20px);
   margin-top: rem(30px);
   @include txt(16px, 500, $color-default-font, left);
   @include txt-option(1.93, 0px);
   font-family: $font-family-YuGothic;
+  @include mq(pc) {
+    margin: 0 rem(40px);
+    margin-top: rem(30px);
+  }
 }
 .support__item-img {
-  position: absolute;
-  bottom: rem(63px);
   width: 100%;
+  margin-top: rem(30px);
+  padding-bottom: rem(30px);
   height: auto;
+  @include mq(pc) {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: rem(63px);
+  }
 }
