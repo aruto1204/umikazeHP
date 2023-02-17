@@ -1,0 +1,30 @@
+-
+  const conceptText = [
+    {
+      title: '産後母乳外来',
+      text01: 'ママは母乳が出ているかだけでなく、授乳の仕方、赤ちゃんに栄養が足りているかも心配ですね。どうすれば無理なく続けていけるのか、ご自身と赤ちゃんにあった授乳方法も一緒に考えていきましょう。',
+      text02: '',
+    },
+    {
+      title: '産後育児相談',
+      text01: '出産後に退院し、お家に帰るとわからないことが出てきます。一つ一つご自身にあった育児について考えることが必要です。赤ちゃんとの遊び方、休息の取り方なども是非ご相談下さい。',
+      text02: '',
+    },
+    {
+      title: '妊娠中の育児教室',
+      text01: '○半日（午前）コース: <br>　午前9時〜13時（4時間）2万円（昼食付） <br>○半日（午後）コース: <br>　午後13時30分〜17時30分（4時間）2万円（夕食付） <br>○夜間コース: <br>　午後18時〜21時（3時間）2万円（お夜食付）',
+      text02: '以上の3コースからお選び下さい。赤ちゃんとお越し頂き、育児技術を習得しながら逗子・葉山・鎌倉で採れた食材で作ったお食事やおやつでリフレッシュ！さらに、これからのエネルギーを蓄えて下さい。',
+    },
+  ]
+//concept
+section
+  .postpartum__concept
+    .postpartum__concept-inner
+      ul.postpartum__items
+        each item in conceptText
+          li.postpartum__item
+            .postpartum__item-title
+              h2 !{item.title}
+            .postpartum__item-text
+              p !{item.text01}
+              p !{item.text02}

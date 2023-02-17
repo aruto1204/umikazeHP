@@ -48,6 +48,14 @@
   }
 }
 
+//width: 1280px以下からwidth: 1025pxだけ表示
+.utils-hidden-tb-pc {
+  display: none !important;
+  @include mq(tb-pc) {
+    display: block !important;
+  }
+}
+
 // 非表示
 .utils-hidden {
   display: none !important;

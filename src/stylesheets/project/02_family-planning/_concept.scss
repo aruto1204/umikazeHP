@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  family-planning__concept
+// ================================================================
+.family-planning__concept {
+  width: 100%;
+  margin-top: rem(99px);
+  margin-bottom: rem(133px);
+}
+.family-planning__wrapper {
+  width: 100%;
+}
+.family-planning__wrapper-title {
+  width: 100%;
+  height: rem(69px);
+  @include txt(25px, 700, $color-white, center);
+  font-family: $font-family-YuGothic;
+  background-color: $color-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(sp-s) {
+    font-size: 20px;
+  }
+}
+.family-planning__wrapper-text {
+  width: 100%;
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+  background-color: $color-blue;
+  padding: 0 rem(20px);
+  padding-top: rem(52.5px);
+  padding-bottom: rem(72.5px);
+}

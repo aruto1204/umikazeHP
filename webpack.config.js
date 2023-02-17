@@ -99,8 +99,16 @@ module.exports = {
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/templates/member/index.pug",
-      filename: "member/index.html",
+      template: "./src/templates/family-planning.pug",
+      filename: "family-planning/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/pregnant.pug",
+      filename: "pregnant/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/postpartum.pug",
+      filename: "postpartum/index.html",
     }),
     new CleanWebpackPlugin(),
   ],

@@ -6,9 +6,9 @@ export default () => {
     loop: true,
     speed: 300,
     centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    // },
     // ページネーションが必要なら追加
     breakpoints: {
       768: {

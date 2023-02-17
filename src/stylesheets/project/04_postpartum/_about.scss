@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  postpartum__about
+// ================================================================
+.postpartum__about {
+  padding-top: rem(44.5px);
+  padding-bottom: rem(66px);
+}
+.postpartum__about-eng {
+  @include txt(23px, 500, $color-default-font, center);
+  @include txt-option(1.73, 0px);
+}
+.postpartum__about-title {
+  @include txt(45px, 500, $color-default-font, center);
+  @include txt-option(1.17, 0px);
+  margin-top: rem(15.5px);
+  @include mq(sp-s) {
+    font-size: 35px;
+  }
+}
+.postpartum__about-text {
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+  margin-top: rem(47.5px);
+}

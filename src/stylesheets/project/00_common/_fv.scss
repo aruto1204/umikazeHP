@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// fv
+// ================================================================
+.fv {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.fv__img {
+  margin-top: rem(100px);
+  @include mq(sp-tb) {
+    margin-top: rem(149px);
+  }
+}

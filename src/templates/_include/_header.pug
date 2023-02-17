@@ -7,33 +7,33 @@
   const navItems = [
     {
       name: "TOP",
-      url: "",
+      url: "/",
     },
     {
       name: "妊活について",
-      url: "",
+      url: "/family-planning",
     },
     {
       name: "妊娠中について",
-      url: "",
+      url: "/pregnant",
     },
     {
       name: "産後について",
-      url: "",
+      url: "/postpartum",
     },
     {
       name: "さまざまな年代の女性を対象にした各教室のご案内",
       //name: "各教室のご案内",
-      url: "",
+      url: "/classroom",
     },
     {
       name: "料金のご案内",
-      url: "",
+      url: "/price",
     },
   ]
   const navTopic = {
         name: "TOPIC<br>最新情報",
-        url: "",
+        url: "/topic",
   }
   const navWeb = {
         name: "webでの<br>お問い合わせ",
@@ -75,7 +75,7 @@ header.header
       .header__instagram
         a(href=navInstagram.url)
           img(src=navInstagram.icon, alt="")
-          //hamburger menu
+    //hamburger menu
     .header__drawer
       - for (var i = 0; i < 3; i++)
         span.header__drawer-line

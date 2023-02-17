@@ -19,14 +19,10 @@ html(lang="ja")
       title #{title}
       script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
   body
-    block header
-      header.header
-        p.logo デフォルトのヘッダーです。
+    include _header.pug
     // main
     main
       block content
         .content
           p デフォルトのコンテンツです。
-    block footer
-      footer.footer
-        p デフォルトのフッターです。
+    include _footer.pug

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  postpartum__concept
+// ================================================================
+.postpartum__concept {
+  width: 100%;
+  margin-top: rem(99px);
+  margin-bottom: rem(153px);
+}
+.postpartum__concept-inner {
+  max-width: rem(1414px);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.postpartum__items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.postpartum__item {
+  width: 100%;
+  max-width: rem(420px);
+}
+// .postpartum__item + .postpartum__item {
+//   margin-top: rem(40px);
+//   @include mq(sp-tb) {
+//     margin: 0;
+//   }
+// }
+.postpartum__item-title {
+  width: 100%;
+  height: rem(108px);
+  @include txt(20px, 700, $color-white, center);
+  @include txt-option(1.72, 0px);
+  font-family: $font-family-YuGothic;
+  background-color: $color-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(pc-m) {
+    font-size: 25px;
+  }
+}
+.postpartum__item-text {
+  width: 100%;
+  min-height: rem(230px);
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+  background-color: $color-blue;
+  padding: 0 rem(20px);
+  padding-top: rem(30px);
+  @include mq(sp-s) {
+    min-height: rem(270px);
+  }
+  @include mq(sp-tb) {
+    padding-top: rem(47.5px);
+    min-height: rem(385px);
+  }
+}

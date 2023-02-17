@@ -1,0 +1,15 @@
+//- 予約リンクボタン
+-
+ const reserveContent = {
+  title: 'お申し込みはこちら',
+  text: 'ご予約',
+  url: '',
+ }
+
+//reserve-btn
+.reserve__content
+  .reserve__content-title
+    h2 #{reserveContent.title}
+  .reserve__content-btn
+    a(href=reserveContent.url)
+      p #{reserveContent.text}

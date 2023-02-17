@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+// reserve-btn
+// ================================================================
+.reserve__content {
+}
+.reserve__content-title {
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+}
+.reserve__content-btn {
+  margin: 0 auto;
+  margin-top: rem(0.5px);
+  width: rem(124px);
+  height: rem(33px);
+}
+.reserve__content-btn a {
+  background-color: $backcolor-hex;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include txt(16px, 700, $color-white, center);
+  transition: all 0.3s ease-out;
+}
+
+@media (hover: hover) {
+  .reserve__content-btn a:hover {
+    background-color: $hover-green;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+  }
+}

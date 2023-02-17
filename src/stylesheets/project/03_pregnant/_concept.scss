@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  pregnant__concept
+// ================================================================
+.pregnant__concept {
+  width: 100%;
+  margin-top: rem(99px);
+  margin-bottom: rem(153px);
+}
+.pregnant__concept-inner {
+  max-width: rem(1340px);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.pregnant__items {
+  display: block;
+  max-width: rem(734px);
+  width: 100%;
+  margin: 0 auto;
+  @include mq(sp-tb) {
+    max-width: rem(1260px);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.pregnant__item {
+  width: 100%;
+  @include mq(sp-tb) {
+    max-width: rem(306px);
+  }
+  @include mq(pc-m) {
+    max-width: rem(346px);
+  }
+}
+.pregnant__item + .pregnant__item {
+  margin-top: rem(40px);
+  @include mq(sp-tb) {
+    margin: 0;
+  }
+}
+.pregnant__item-title {
+  width: 100%;
+  height: rem(108px);
+  @include txt(20px, 700, $color-white, center);
+  @include txt-option(1.72, 0px);
+  font-family: $font-family-YuGothic;
+  background-color: $color-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(pc-m) {
+    font-size: 25px;
+  }
+}
+.pregnant__item-title span {
+  @include txt(19px, 700, $color-white, center);
+  @include txt-option(1.84, 0px);
+}
+.pregnant__item-text {
+  width: 100%;
+  min-height: rem(230px);
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+  background-color: $color-blue;
+  padding: 0 rem(37px);
+  padding-top: rem(30px);
+  @include mq(sp-s) {
+    min-height: rem(270px);
+  }
+  @include mq(sp-tb) {
+    padding-top: rem(47.5px);
+    min-height: rem(391px);
+  }
+}
