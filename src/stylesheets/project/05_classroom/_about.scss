@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  classroom__about
+// ================================================================
+.classroom__about {
+  padding-top: rem(44.5px);
+  padding-bottom: rem(100.5px);
+}
+.classroom__about-eng {
+  @include txt(23px, 500, $color-default-font, center);
+  @include txt-option(1.73, 0px);
+}
+.classroom__about-title {
+  @include txt(45px, 500, $color-default-font, center);
+  @include txt-option(1.77, 0px);
+  margin-top: rem(4px);
+  // @include mq(sp-s) {
+  //   font-size: 35px;
+  // }
+}

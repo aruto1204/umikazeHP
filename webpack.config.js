@@ -110,6 +110,10 @@ module.exports = {
       template: "./src/templates/postpartum.pug",
       filename: "postpartum/index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/classroom.pug",
+      filename: "classroom/index.html",
+    }),
     new CleanWebpackPlugin(),
   ],
 };

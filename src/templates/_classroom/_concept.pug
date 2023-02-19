@@ -1,0 +1,26 @@
+-
+  const conceptText = [
+    {
+      title: '妊娠中のマイナートラブル<br><span>（妊娠に伴って生ずる不快症状）</span><br class="utils-hidden-tb-pc">相談',
+      text: '初期のつわり症状から、後期の腰痛まで、妊娠中はさまざまなマイナートラブルがあります。それらの種類・症状と対処方法をご説明いたします。',
+    },
+    {
+      title: '妊娠中のお産教室',
+      text: 'お産の際にはどんな経過で赤ちゃんが産まれて来るのでしょうか。模型を使いながら赤ちゃんの様子、産道の様子、呼吸法やいきみ方などもご説明いたします。一緒にシミュレーションしてみましょう。<br>ご主人様の参加も大歓迎です。',
+    },
+    {
+      title: '妊娠中の育児教室',
+      text: '生まれてからではなく、妊娠中から赤ちゃんのいる生活や育児の方法を理解し、余裕を持って赤ちゃんをお迎えしませんか？抱き方、オムツ交換、沐浴（あかちゃんのお風呂）、授乳方法、お部屋のレイアウト、などご一緒に楽しく赤ちゃんのいる生活の準備をいたしましょう。',
+    },
+  ]
+//concept
+section
+  .pregnant__concept
+    .pregnant__concept-inner
+      ul.pregnant__items
+        each item in conceptText
+          li.pregnant__item
+            .pregnant__item-title
+              h2 !{item.title}
+            .pregnant__item-text
+              p !{item.text}
