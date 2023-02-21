@@ -68,25 +68,6 @@
     min-width: rem(120px);
   }
 }
-.header__item:nth-child(1) {
-  min-width: rem(40px);
-  @include mq(pc-m) {
-    min-width: rem(120px);
-  }
-}
-.header__item:nth-child(3) {
-  min-width: rem(114px);
-  @include mq(pc-m) {
-    min-width: rem(120px);
-  }
-}
-.header__item:nth-child(5) {
-  min-width: rem(128px);
-  @include mq(pc-w) {
-    width: rem(381px);
-  }
-}
-
 .header__item a {
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1.68, 0px);

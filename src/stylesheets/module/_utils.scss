@@ -24,11 +24,11 @@
 
 // PCだけ非表示
 .utils-hidden-pc {
-  @include mq(pc) {
-    display: none !important;
-  }
   @include mq(mobile) {
     display: inline-block !important;
+  }
+  @include mq(pc) {
+    display: none !important;
   }
 }
 //width: 567px以下だけ表示
@@ -37,6 +37,14 @@
 
   @include mq(sp-s) {
     display: block !important;
+  }
+}
+//width: 1024px以下だけ表示
+.utils-hidden-sp-tb {
+  display: block !important;
+
+  @include mq(sp-tb) {
+    display: none !important;
   }
 }
 .utils-block-hidden-pc {

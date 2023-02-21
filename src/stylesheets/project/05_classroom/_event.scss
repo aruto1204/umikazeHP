@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  classroom__event
+// ================================================================
+.classroom__event {
+  margin-bottom: rem(201px);
+}
+.classroom__event-title {
+  width: rem(232px);
+  height: rem(74px);
+  margin: 0 auto;
+  @include txt(16px, 700, $color-white, center);
+  @include txt-option(1.56, 0px);
+  font-family: $font-family-YuGothic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $backcolor-green;
+}
+.classroom__items {
+  margin-top: rem(97.5px);
+  padding-bottom: rem(84.5px);
+  border-bottom: 1px solid $color-gray;
+}
+.classroom__item {
+}
+.classroom__item-title {
+  @include txt(25px, 500, $color-default-font, center);
+  @include txt-option(1.28, 0px);
+}
+.classroom__item-text {
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+}
+.classroom__item + .classroom__item {
+  margin-top: rem(77px);
+}
+
+.classroom__schedule {
+  @include txt(25px, 500, $color-default-font, center);
+  @include txt-option(2.8, 0px);
+  margin-top: rem(71.5px);
+  @include mq(sp-s) {
+    font-size: 20px;
+  }
+}
+.classroom__comment {
+  width: 100%;
+  border-radius: 16px;
+  background-color: $color-blue;
+  margin-top: rem(45.5px);
+  padding: 0 rem(20px);
+  padding-bottom: rem(43.5px);
+  padding-top: rem(9.5px);
+}
+.classroom__comment h3 {
+  @include txt(25px, 500, $color-default-font, center);
+  @include txt-option(3.2, 0px);
+  @include mq(sp-s) {
+    font-size: 20px;
+  }
+}
+.classroom__comment p {
+  padding-top: rem(1px);
+  @include txt(16px, 500, $color-default-font, center);
+  @include txt-option(2.18, 0px);
+}

@@ -1,0 +1,117 @@
+-
+  const paymentText = {
+    title: 'お支払方法について',
+    text: 'うみかぜ助産院ではお支払い方法が4種類',
+    sub: '患者様の生活スタイルに合わせてお選びできる4種類をご用意してあります。',
+  }
+  const cashText = {
+    title: '現金',
+    text: '診療代金は全て現金でのお支払いに対応しております。',
+  }
+  const qrText = {
+    title: 'QR決済',
+    text: 'QRコード決済では診療代金全てお支払いができます。',
+    possible: 'ご利用できるQR決済',
+  }
+  const qrItems = [
+    {
+      img: '../images/07_prime/paypay.png',
+      title: 'PayPay',
+    },
+    {
+      img: '../images/07_prime/id.png',
+      title: 'ID',
+    },
+    {
+      img: '../images/07_prime/quicpay.png',
+      title: 'QUICPay',
+    },
+  ]
+  const electronicText = {
+    title: '電子マネー決済',
+    text: 'QRコード決済では施術代金全てお支払いができます。',
+    possible: 'ご利用できるQR決済',
+    category: '各種交通系電子マネー',
+  }
+  const electronicItems = [
+    {
+      img: '../images/07_prime/electronic-money_01.png',
+    },
+    {
+      img: '../images/07_prime/electronic-money_02.png',
+    },
+    {
+      img: '../images/07_prime/electronic-money_03.png',
+    },
+    {
+      img: '../images/07_prime/electronic-money_04.png',
+    },
+  ]
+  const creditText = {
+    title: 'クレジットカード',
+    text: '下記が対応カード会社です。',
+    possible: 'ご利用できるカード',
+    supplement: '※クレジットカードの場合はご本人様名義カードのみお支払いとなります。御家族様名義のカードは名義人様同伴であればご利用いただけます。ご利用頂けるお支払方法は、お客さまの所属カード会社により異なります。',
+    note: '事前クレジットカードのお支払いも可能です。ご希望の方は【ご予約・お問い合わせ】時にその旨をお伝えください。',
+  }
+  const creditItems = [
+    {
+      img: '../images/07_prime/master.png',
+      title: 'MASTER',
+    },
+    {
+      img: '../images/07_prime/visa.png',
+      title: 'VISA',
+    },
+    {
+      img: '../images/07_prime/jcb.png',
+      title: 'JCB',
+    },
+    {
+      img: '../images/07_prime/amex.png',
+      title: 'AMERICAN<br>EXPRESS',
+    },
+    {
+      img: '../images/07_prime/diners.png',
+      title: 'Diners Club',
+    },
+    {
+      img: '../images/07_prime/discover.png',
+      title: 'DISCOVER',
+    },
+  ]
+
+//payment
+section
+  .payment
+    .payment__inner
+      .payment__content
+        .payment__content-title
+          h2 #{paymentText.title}
+        .payment__content-text
+          p #{paymentText.text}
+          p #{paymentText.sub}
+      .payment__cash
+        .payment-title
+          h3 #{cashText.title}
+        .payment-text
+          p #{cashText.text}
+      .payment__qr
+        .payment-title
+          h3 #{qrText.title}
+        .payment-text
+          p #{qrText.text}
+      .payment__electronic
+        .payment-title
+          h3 #{electronicText.title}
+        .payment-text
+          p #{electronicText.text}
+      .payment__credit
+        .payment-title
+          h3 #{creditText.title}
+        .payment-text
+          p #{creditText.text}
+        .payment__credit-supplement
+          p #{creditText.supplement}
+        .payment__credit-note
+          p #{creditText.note}

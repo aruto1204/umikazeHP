@@ -1,0 +1,71 @@
+-
+  const eventTitle = {
+    title: '様々な教室・イベント<br>最新情報',
+  }
+  const eventText = [
+    {
+      title: '思春期ゼミ',
+      text: '月経サポート教室・性感染症予防教室・予期せぬ妊娠予防教室など',
+    },
+    {
+      title: '更年期ゼミ',
+      text: '更年期のホルモン正しい知識、更年期障害対策',
+    },
+    {
+      title: '妊活栄養教室',
+      text: '妊娠前からの栄養教室',
+    },
+    {
+      title: '赤ちゃんのスキンケア教室',
+      text: '赤ちゃんのスキンケアのお勉強会です。',
+    },
+    {
+      title: 'ベビーマッサージ教室',
+      text: 'マッサージのインストラクターからマッサージの基本を学び、親子で楽しみましょう。',
+    },
+    {
+      title: 'ゆる～く健康ヨガ',
+      text: 'ゆったりとしたストレッチとヨガを体験し、分娩に向けての身体的準備を致しましょう。',
+    },
+    {
+      title: '時短かんたん料理試食会',
+      text: '逗子・葉山・鎌倉で採れたお野菜を使って栄養バランスを考えた時短簡単レシピのお勉強と試食会です。',
+    },
+    {
+      title: '時短かんたん離乳食試食会',
+      text: '離乳食を作ってみよう！レトルトではなく、たまには手づくり離乳食！初めてでも簡単離乳食作りにチャレンジしよう！',
+    },
+    {
+      title: 'ゆっくりのんびり海までお散歩トレーニング<br class="utils-hidden-sp-tb">（海までゆっくり徒歩約15分）',
+      text: '1日1万歩を目標に、逗子海岸までゆっくりとしたお散歩をしてお産に向けた体力をつけましょう。',
+    },
+    {
+      title: 'ゆっくりのんびりお山お散歩トレーニング',
+      text: '1日1万歩を目標に、南郷上ノ山公園までゆっくりとお散歩をして四季を感じながらお産のための体力作りをしましょう。',
+    },
+  ]
+  const eventSchedule = {
+    title: '助産師向け助産院開業コンサル<br class="utils-hidden-pc">（開講予定）<br>看護職向けキャリアコンサル<br class="utils-hidden-pc">（開講予定）',
+  }
+  const eventComment = {
+    title: '毎月のイベントに関して',
+    text: '日本の季節の行事に込められた思いを感じ、育児を楽しみましょう。',
+  }
+//event
+section
+  .classroom__event
+    .inner-classroom
+      .classroom__event-title
+        h2 !{eventTitle.title}
+      ul.classroom__items
+        each item in eventText
+          li.classroom__item
+            .classroom__item-title
+              h3 !{item.title}
+            .classroom__item-text
+              p #{item.text}
+      .classroom__schedule
+        h3 !{eventSchedule.title}
+      .classroom__comment
+        h3 #{eventComment.title}
+        p #{eventComment.text}

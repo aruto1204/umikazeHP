@@ -1,0 +1,116 @@
+-
+  const contentText = {
+    title: '料金のご案内',
+    campaign: '開業記念キャンペーン',
+    text: 'キャンペーン期間/3月24日～5月末',
+  }
+  const contentItems = [
+    {
+      title: '妊活相談',
+      time: '1時間',
+      price: '10,000<span>円</span>',
+    },
+    {
+      title: '産前ケア',
+      time: '1時間',
+      price: '10,000<span>円</span>',
+    },
+    {
+      title: '産後ケア',
+      time: '4時間',
+      price: '25,000<span>円</span>',
+    },
+    {
+      title: '育児相談',
+      time: '2時間',
+      price: '15,000<span>円</span>',
+    },
+    {
+      title: '育児教室',
+      time: '2時間',
+      price: '20,000<span>円</span>',
+    },
+    {
+      title: '授乳教室',
+      time: '1時間',
+      price: '10,000<span>円</span>',
+    },
+    {
+      title: 'オンライン相談',
+      time: '40分',
+      price: '8,000<span>円</span>',
+    },
+    {
+      title: 'オンライン相談',
+      time: '60分',
+      price: '14,000<span>円</span>',
+    },
+    {
+      title: '両親学級：妊娠期',
+      time: '2時間',
+      price: '15,000<span>円</span>',
+    },
+    {
+      title: '両親学級：分娩期',
+      time: '2時間',
+      price: '15,000<span>円</span>',
+    },
+    {
+      title: '栄養・離乳食教室 試食付き',
+      time: '2時間',
+      price: '5,000<span>円</span>',
+    },
+    {
+      title: 'マタニティヨガ・ レディースヨガ',
+      time: '2時間',
+      price: '5,000<span>円</span>',
+    },
+    {
+      title: 'スキンケア・<br>ベビーマッサージ',
+      time: '2時間',
+      price: '5,000<span>円</span>',
+    },
+    {
+      title: '思春期ゼミ',
+      time: '90分',
+      price: '5,000<span>円</span>',
+    },
+    {
+      title: '更年期ゼミ',
+      time: '90分',
+      price: '5,000<span>円</span>',
+    },
+    {
+      title: '読み聞かせ教室 （おやつ含む）',
+      time: '',
+      price: '3,000<span>円</span>',
+    },
+    {
+      title: '各種イベント',
+      time: '',
+      price: '2,000<span>円</span>〜5,000<span>円</span>',
+    },
+  ]
+
+//price
+section
+  .price__guid
+    .price__guid__inner
+      .price__guid-content
+        .price__guid-title
+          h2 #{contentText.title}
+        .price__guid-campaign
+          p #{contentText.campaign}
+        .price__guid-text
+          p #{contentText.text}
+      ul.price__guid__items
+        .price__guid__items-background
+        each item in contentItems
+          li.price__guid__item
+            .price__guid__item-title
+              h2 !{item.title}
+            if item.time
+              .price__guid__item-time
+                p #{item.time}
+            .price__guid__item-price
+              p !{item.price}

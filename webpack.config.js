@@ -114,6 +114,14 @@ module.exports = {
       template: "./src/templates/classroom.pug",
       filename: "classroom/index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/privacy.pug",
+      filename: "privacy/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/price.pug",
+      filename: "price/index.html",
+    }),
     new CleanWebpackPlugin(),
   ],
 };

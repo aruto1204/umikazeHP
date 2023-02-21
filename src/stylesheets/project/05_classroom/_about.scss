@@ -16,7 +16,7 @@
   @include txt(45px, 500, $color-default-font, center);
   @include txt-option(1.77, 0px);
   margin-top: rem(4px);
-  // @include mq(sp-s) {
-  //   font-size: 35px;
-  // }
+  @include mq(sp-s) {
+    font-size: 28px;
+  }
 }

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  privacy
+// ================================================================
+.privacy {
+  width: 100%;
+  overflow: hidden;
+  padding-top: rem(149px);
+  margin-bottom: rem(147.5px);
+}
+.privacy__items {
+  margin-top: rem(96px);
+  @include mq(sp-tb) {
+    margin-top: rem(149px);
+  }
+}
+
+.privacy__item + .privacy__item {
+  margin-top: rem(89.5px);
+}
+.privacy__item-title {
+  @include txt(45px, 500, $color-default-font, center);
+  @include txt-option(1.17, 0px);
+  padding-bottom: rem(49.5px);
+  border-bottom: 1px solid $color-gray;
+  @include mq(sp-s) {
+    font-size: 28px;
+  }
+}
+.privacy__item-text {
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(2.18, 0px);
+  padding-top: rem(44px);
+}
+
+// ================================================================
+//  intend
+// ================================================================
+.intend-s {
+  display: block;
+  padding-left: rem(19px);
+}
+.intend-m {
+  display: block;
+  padding-left: rem(46px);
+}
