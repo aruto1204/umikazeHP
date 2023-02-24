@@ -15,6 +15,9 @@
   max-width: rem(839px);
   padding: 0 rem(40px);
   margin: 0 auto;
+  @include mq(sp-s) {
+    padding: 0 rem(20px);
+  }
 }
 
 // ================================================================
@@ -25,17 +28,24 @@
 .payment__content-title {
   @include txt(45px, 500, $color-default-font, center);
   @include txt-option(1.17, 0px);
+  @include mq(sp-s) {
+    font-size: 36px;
+  }
 }
 .payment__content-text {
   width: 100%;
   background-color: $color-blue;
   border-radius: 28px;
   margin-top: rem(46px);
+  padding: 0 rem(20px);
   padding-top: rem(23px);
   padding-bottom: rem(23.5px);
   @include txt(32px, 700, $color-default-font, center);
   @include txt-option(1.68, 0px);
   font-family: $font-family-YuGothic;
+  @include mq(sp-s) {
+    font-size: 24px;
+  }
 }
 .payment__content-text p:nth-child(2) {
   @include txt(16px, 500, $color-default-font, center);
@@ -71,12 +81,191 @@
 .payment__qr {
   margin-top: rem(69px);
 }
+.payment__qr__content {
+  margin-top: rem(14.5px);
+  padding: 0 rem(20px);
+  padding-top: rem(26px);
+  padding-bottom: rem(39.5px);
+  border: 1px solid $color-gray;
+  border-radius: 28px;
+}
+.payment__qr__content-title {
+  @include txt(20px, 500, $color-default-font, center);
+  @include txt-option(1.7, 0px);
+  font-family: $font-family-YuGothic;
+}
+.payment__qr__content-items {
+  max-width: rem(562px);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem(16px);
+  padding-left: rem(10px);
+  display: flex;
+  justify-content: space-between;
+  @include mq(sp-s) {
+    display: block;
+    margin-top: rem(40px);
+  }
+}
+.payment__qr__content-item {
+  max-width: rem(136px);
+  width: 100%;
+  @include mq(sp-s) {
+    margin: 0 auto;
+  }
+}
+.payment__qr__content-item + .payment__qr__content-item {
+  @include mq(sp-s) {
+    margin-top: rem(20px);
+  }
+}
+.payment__qr__content-item-img {
+  width: 100%;
+  height: rem(107px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment__qr__content-item-title p {
+  margin-top: rem(20px);
+  @include txt(20px, 500, $color-default-font, center);
+  @include txt-option(1.75, 0px);
+  font-family: $font-family-YuGothic;
+  @include mq(sp-s) {
+    font-size: 16px;
+  }
+}
+.payment__qr__content-item-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: rem(19.5px);
+  background-color: $color-gray;
+}
 
 // ================================================================
 //  電子マネー決済
 // ================================================================
 .payment__electronic {
   margin-top: rem(101.5px);
+}
+.payment__electronic__content {
+  margin-top: rem(27.5px);
+  padding: 0 rem(20px);
+  padding-top: rem(26px);
+  padding-bottom: rem(31px);
+  border: 1px solid $color-gray;
+  border-radius: 28px;
+}
+.payment__electronic__content-title {
+  @include txt(20px, 500, $color-default-font, center);
+  @include txt-option(1.7, 0px);
+  font-family: $font-family-YuGothic;
+}
+.payment__electronic__content-wrapper {
+  max-width: rem(412px);
+  margin: 0 auto;
+  margin-top: rem(20px);
+  display: flex;
+  flex-wrap: wrap;
+  @include mq(sp-s) {
+    max-width: rem(250px);
+    margin: 0 auto;
+    margin-top: rem(20px);
+  }
+  @include mq(sp-tb) {
+    max-width: rem(698px);
+  }
+}
+.payment__electronic__content-wrapper img {
+  max-width: rem(412px);
+  height: rem(96px);
+  width: 100%;
+  @include mq(sp-s) {
+    max-width: rem(250px);
+    height: rem(58px);
+  }
+}
+.payment__electronic__content-wrapper img:nth-child(2) {
+  max-width: rem(277px);
+  margin-left: 0;
+  margin-top: rem(24px);
+  padding-top: rem(13px);
+  padding-bottom: rem(13px);
+  width: 100%;
+  @include mq(sp-s) {
+    max-width: rem(168px);
+    height: rem(58px);
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
+    margin-top: rem(12px);
+  }
+  @include mq(sp-tb) {
+    margin-left: rem(7px);
+    margin-top: 0;
+  }
+}
+.payment__electronic__content-wrapper img:nth-child(3) {
+  max-width: rem(125px);
+  width: 100%;
+  height: rem(96px);
+  padding-bottom: rem(12px);
+  margin-top: rem(24px);
+  margin-left: rem(10px);
+  @include mq(sp-s) {
+    max-width: rem(75px);
+    height: rem(50px);
+    padding-top: rem(4px);
+    padding-bottom: rem(4px);
+    padding: 0;
+    margin-top: rem(12px);
+    margin-left: rem(7px);
+  }
+  @include mq(sp-tb) {
+    margin-left: 0;
+  }
+}
+.payment__electronic__content-wrapper img:nth-child(4) {
+  max-width: rem(411px);
+  width: 100%;
+  padding-top: rem(2px);
+  padding-bottom: rem(27px);
+  margin-top: rem(24px);
+  margin-left: rem(1px);
+  @include mq(sp-s) {
+    max-width: rem(250px);
+    height: rem(58px);
+    padding-top: rem(8.7px);
+    padding-bottom: rem(8.7px);
+    margin-top: rem(12px);
+    margin-left: 0;
+  }
+  @include mq(sp-tb) {
+    margin-left: rem(24px);
+  }
+}
+.payment__electronic__content-category {
+  width: 100%;
+  padding-left: rem(43.5px);
+  padding-right: rem(41.5px);
+}
+.payment__electronic__content-category p {
+  @include txt(20px, 500, $color-default-font, center);
+  @include txt-option(1.75, 0px);
+  font-family: $font-family-YuGothic;
+  margin-top: rem(20px);
+  @include mq(sp-s) {
+    font-size: 16px;
+  }
+}
+.payment__electronic__content-category::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: rem(10px);
+  background-color: $color-gray;
 }
 
 // ================================================================
@@ -85,6 +274,126 @@
 .payment__credit {
   margin-top: rem(105.5px);
 }
+.payment__credit__content {
+  margin-top: rem(14.5px);
+  padding: 0 rem(20px);
+  padding-top: rem(26px);
+  padding-bottom: rem(31.75px);
+  border: 1px solid $color-gray;
+  border-radius: 28px;
+}
+.payment__credit__content-title {
+  @include txt(20px, 500, $color-default-font, center);
+  @include txt-option(1.7, 0px);
+  font-family: $font-family-YuGothic;
+}
+.payment__credit__content-items {
+  max-width: rem(349px);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem(29.5px);
+  padding-left: rem(10px);
+  display: grid;
+  grid-template-columns: repeat(2, 136px);
+  row-gap: rem(38.75px);
+  column-gap: rem(77px);
+  @include mq(sp-s) {
+    max-width: rem(250px);
+    padding-left: 0;
+    grid-template-columns: repeat(2, 110px);
+    column-gap: rem(20px);
+  }
+  @include mq(pc) {
+    max-width: rem(572px);
+    grid-template-columns: repeat(3, 136px);
+  }
+}
+.payment__credit__content-item {
+  max-width: rem(136px);
+}
+.payment__credit__content-item-img {
+  width: 100%;
+  height: rem(82px);
+  margin-bottom: rem(16.5px);
+  object-fit: cover;
+}
+.payment__credit__content-item:nth-child(2) .payment__credit__content-item-img {
+  max-width: rem(117.5px);
+  height: rem(77px);
+  margin-bottom: rem(21.25px);
+  padding-top: rem(6px);
+  @include mq(sp-s) {
+    max-width: rem(106px);
+    padding-left: rem(4px);
+  }
+}
+.payment__credit__content-item:nth-child(3) .payment__credit__content-item-img {
+  max-width: rem(117.5px);
+  height: rem(82px);
+  margin-bottom: rem(26.25px);
+  padding-top: rem(6px);
+  padding-left: rem(22.5px);
+  @include mq(sp-s) {
+    max-width: rem(105px);
+    padding-left: rem(5px);
+  }
+  @include mq(pc) {
+    margin-bottom: rem(16.25px);
+  }
+}
+.payment__credit__content-item:nth-child(4) .payment__credit__content-item-img {
+  max-width: rem(108.25px);
+  height: rem(92px);
+  margin-bottom: rem(16.25px);
+  padding-left: rem(16.25px);
+  @include mq(sp-s) {
+    max-width: rem(101px);
+    padding-left: rem(9px);
+  }
+}
+.payment__credit__content-item:nth-child(5) .payment__credit__content-item-img {
+  max-width: rem(117.5px);
+  height: rem(86px);
+  margin-bottom: rem(22.25px);
+  padding-top: rem(5px);
+  padding-left: rem(7.5px);
+  @include mq(sp-s) {
+    max-width: rem(105px);
+    height: rem(78px);
+    padding-left: rem(5px);
+    margin-bottom: rem(30.25px);
+  }
+}
+.payment__credit__content-item:nth-child(6) .payment__credit__content-item-img {
+  max-width: rem(126.5px);
+  height: rem(81px);
+  margin-bottom: rem(27.25px);
+  padding-top: rem(9px);
+  padding-left: rem(9.5px);
+  @include mq(sp-s) {
+    max-width: rem(103.5px);
+    height: rem(68px);
+    padding-left: rem(6.5px);
+    margin-bottom: rem(40.25px);
+  }
+}
+.payment__credit__content-item-title p {
+  margin-top: rem(20px);
+  @include txt(20px, 500, $color-default-font, center);
+  @include txt-option(1.75, 0px);
+  font-family: $font-family-YuGothic;
+  @include mq(sp-s) {
+    font-size: 16px;
+  }
+}
+.payment__credit__content-item-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $color-gray;
+}
+
 .payment__credit-supplement {
   @include txt(16px, 500, $color-default-font, left);
   @include txt-option(2.18, 0px);

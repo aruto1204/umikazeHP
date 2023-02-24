@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@use "../../global" as *;
+
+// ================================================================
+//  topic-list
+// ================================================================
+.topic-list {
+  width: 100%;
+  overflow: hidden;
+  padding-top: rem(100px);
+  margin-bottom: rem(60px);
+  @include mq(sp-tb) {
+    padding-top: rem(149px);
+    margin-bottom: rem(113.5px);
+  }
+}
+.topic-list__inner {
+  width: 100%;
+  height: 100%;
+  max-width: rem(1426px);
+  padding: 0 rem(40px);
+  margin: 0 auto;
+  @include mq(sp-s) {
+    padding: 0 rem(20px);
+  }
+}
+.topic-list__items {
+  margin-top: rem(8.5px);
+  width: 100%;
+}
+.topic-list__item {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: rem(102.5px);
+  padding-bottom: rem(137.5px);
+  border-bottom: 1px solid $color-gray;
+}
+.topic-list__item:nth-last-child(1) {
+  border-bottom: none;
+}
+.topic-list__item-title {
+  max-width: rem(918px);
+  width: 100%;
+  margin: 0 auto;
+  @include txt(45px, 500, $color-default-font, left);
+  @include txt-option(1.17, 0px);
+  @include mq(sp-s) {
+    font-size: 32px;
+  }
+}
+.topic-list__item-date {
+  max-width: rem(918px);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem(8.5px);
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
+}
+.topic-list__item-text {
+  max-width: rem(918px);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem(53.5px);
+  @include txt(16px, 500, $color-default-font, left);
+  @include txt-option(1.87, 0px);
+  font-family: $font-family-YuGothic;
+}
+.topic-list__item-text p {
+  max-width: rem(862px);
+}
+.topic-list__item-img {
+  max-width: rem(918px);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem(39px);
+}

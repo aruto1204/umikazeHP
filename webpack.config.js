@@ -122,6 +122,10 @@ module.exports = {
       template: "./src/templates/price.pug",
       filename: "price/index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/topic.pug",
+      filename: "topic/index.html",
+    }),
     new CleanWebpackPlugin(),
   ],
 };

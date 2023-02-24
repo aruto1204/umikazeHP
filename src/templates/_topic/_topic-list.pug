@@ -1,0 +1,33 @@
+-
+  const topicItems = [
+    {
+      title: '元気な女の子誕生',
+      date: '2023.04.01',
+      text: '今回は5人目の出産となるおかあさん。 <br><br>妊娠中も4人のお子さんの子育てをしながら、 <br>お仕事もされて、 <br>本当に頭が上がりませんっ！ <br><br>休めてます？？と何度妊婦健診で聞いたかな？笑 <br><br>いよいよ出産の日。 <br><br>７月7日の七夕の日に「トイレでおしるしがありました」とLINEがあり、 <br>眠れそうだし寝ます！とのこと。 <br><br>翌朝7月8日、朝陽の昇る頃に「なんかちょっと痛みがある張りが出て来て。。」と陣痛が始まった様子。 <br><br>お子さんとご主人を起こして、まもなく助産院へ到着！ <br><br>陣痛中もお姉ちゃんお兄ちゃんが小さな妹たちをよくよく面倒見てくれて、 <br>なるほどこの結束力があるからお母さん頑張ってこられたんだなと <br>思いました。<br>',
+      img: '../images/08_topic/topic-list_01.png',
+      alt: 'topic画像',
+    },
+    {
+      title: '元気な女の子誕生',
+      date: '2023.04.01',
+      text: '今回は5人目の出産となるおかあさん。 <br><br>妊娠中も4人のお子さんの子育てをしながら、 <br>お仕事もされて、 <br>本当に頭が上がりませんっ！ <br><br>休めてます？？と何度妊婦健診で聞いたかな？笑 <br><br>いよいよ出産の日。 <br><br>７月7日の七夕の日に「トイレでおしるしがありました」とLINEがあり、 <br>眠れそうだし寝ます！とのこと。 <br><br>翌朝7月8日、朝陽の昇る頃に「なんかちょっと痛みがある張りが出て来て。。」と陣痛が始まった様子。 <br><br>お子さんとご主人を起こして、まもなく助産院へ到着！ <br><br>陣痛中もお姉ちゃんお兄ちゃんが小さな妹たちをよくよく面倒見てくれて、 <br>なるほどこの結束力があるからお母さん頑張ってこられたんだなと <br>思いました。<br>',
+      img: '../images/08_topic/topic-list_02.png',
+      alt: 'topic画像',
+    },
+  ]
+
+//topic-list
+section
+  .topic-list
+    .topic-list__inner
+      ul.topic-list__items
+        each topicItem in topicItems
+          li.topic-list__item
+            .topic-list__item-title
+              h2 #{topicItem.title}
+            .topic-list__item-date
+              time #{topicItem.date}
+            .topic-list__item-text
+              p !{topicItem.text}
+            .topic-list__item-img
+              img(src=topicItem.img , alt=topicItem.alt)

@@ -15,15 +15,15 @@
   }
   const qrItems = [
     {
-      img: '../images/07_prime/paypay.png',
+      img: '../images/07_price/paypay.png',
       title: 'PayPay',
     },
     {
-      img: '../images/07_prime/id.png',
+      img: '../images/07_price/id.png',
       title: 'ID',
     },
     {
-      img: '../images/07_prime/quicpay.png',
+      img: '../images/07_price/quicpay.png',
       title: 'QUICPay',
     },
   ]
@@ -35,16 +35,20 @@
   }
   const electronicItems = [
     {
-      img: '../images/07_prime/electronic-money_01.png',
+      img: '../images/07_price/electronic-money_01.png',
+      alt: '電子マネー決済イメージ画像',
     },
     {
-      img: '../images/07_prime/electronic-money_02.png',
+      img: '../images/07_price/electronic-money_02.png',
+      alt: '電子マネー決済イメージ画像',
     },
     {
-      img: '../images/07_prime/electronic-money_03.png',
+      img: '../images/07_price/electronic-money_03.png',
+      alt: '電子マネー決済イメージ画像',
     },
     {
-      img: '../images/07_prime/electronic-money_04.png',
+      img: '../images/07_price/electronic-money_04.png',
+      alt: '電子マネー決済イメージ画像',
     },
   ]
   const creditText = {
@@ -56,28 +60,34 @@
   }
   const creditItems = [
     {
-      img: '../images/07_prime/master.png',
+      img: '../images/07_price/master.png',
       title: 'MASTER',
+      alt: 'MASTER',
     },
     {
-      img: '../images/07_prime/visa.png',
+      img: '../images/07_price/visa.png',
       title: 'VISA',
+      alt: 'VISA',
     },
     {
-      img: '../images/07_prime/jcb.png',
+      img: '../images/07_price/jcb.png',
       title: 'JCB',
+      alt: 'JCB',
     },
     {
-      img: '../images/07_prime/amex.png',
+      img: '../images/07_price/amex.png',
       title: 'AMERICAN<br>EXPRESS',
+      alt: 'AMERICAN EXPRESS',
     },
     {
-      img: '../images/07_prime/diners.png',
+      img: '../images/07_price/diners.png',
       title: 'Diners Club',
+      alt: 'Diners Club',
     },
     {
-      img: '../images/07_prime/discover.png',
+      img: '../images/07_price/discover.png',
       title: 'DISCOVER',
+      alt: 'DISCOVER',
     },
   ]
 
@@ -101,16 +111,44 @@ section
           h3 #{qrText.title}
         .payment-text
           p #{qrText.text}
+        .payment__qr__content
+          .payment__qr__content-title
+            h4 #{qrText.possible}
+          ul.payment__qr__content-items
+            each qrItem in qrItems
+              li.payment__qr__content-item
+                .payment__qr__content-item-img
+                  img(src=qrItem.img, alt=qrItem.title)
+                .payment__qr__content-item-title
+                  p #{qrItem.title}
       .payment__electronic
         .payment-title
           h3 #{electronicText.title}
         .payment-text
           p #{electronicText.text}
+        .payment__electronic__content
+          .payment__electronic__content-title
+            p  #{electronicText.possible}
+          .payment__electronic__content-wrapper
+            each electronicItem in electronicItems
+              img(src=electronicItem.img, alt=electronicItem.alt)
+          .payment__electronic__content-category
+            p #{electronicText.category}
       .payment__credit
         .payment-title
           h3 #{creditText.title}
         .payment-text
           p #{creditText.text}
+        .payment__credit__content
+          .payment__credit__content-title
+            h4 #{qrText.possible}
+          ul.payment__credit__content-items
+            each creditItem in creditItems
+              li.payment__credit__content-item
+                .payment__credit__content-item-img
+                  img(src=creditItem.img, alt=creditItem.alt)
+                .payment__credit__content-item-title
+                  p !{creditItem.title}
         .payment__credit-supplement
           p #{creditText.supplement}
         .payment__credit-note
