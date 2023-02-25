@@ -3,23 +3,23 @@
   const footerMenus = [
     {
       name: "妊活について",
-      url: "",
+      url: "/family-planning",
     },
     {
       name: "妊娠中について",
-      url: "",
+      url: "/pregnant",
     },
     {
       name: "産後について",
-      url: "",
+      url: "/postpartum",
     },
     {
       name: "各教室のご案内",
-      url: "",
+      url: "/classroom",
     },
     {
       name: "料金のご案内",
-      url: "",
+      url: "/price",
     },
   ]
   const footerItems = {
@@ -34,6 +34,7 @@
     text02: "JR逗子駅東口より徒歩3分<br>京急逗子・葉山駅より徒歩3分 ■お車でご来院の方<br>横浜銀行逗子支店隣のコインパーキングをご利用下さい。<br>コインパーキング徒歩0分",
     tel: "お電話でのお問い合わせ",
     number: "<span>TEL</span> 046-876-1124",
+    href: "tel:046-876-1124",
     web: "webでのお問い合わせ",
   }
   const footerCopy = {
@@ -59,7 +60,7 @@ footer.footer
           .footer__contact-title
             h3 !{footerContact.tel}
           .footer__contact-tel
-            tel !{footerContact.number}
+            a(href=footerContact.href) !{footerContact.number}
           .footer__contact-title
             h3 !{footerContact.web}
         .footer__wrapper-map

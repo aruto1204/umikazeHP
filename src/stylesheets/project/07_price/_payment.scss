@@ -6,7 +6,7 @@
 // ================================================================
 .payment {
   width: 100%;
-  margin-top: rem(173.5px);
+  padding-top: rem(173.5px);
   margin-bottom: rem(127.5px);
 }
 .payment__inner {
@@ -57,7 +57,7 @@
 //  各項目のタイトル
 // ================================================================
 .payment-title {
-  @include txt(35px, 700, $hover-green, center);
+  @include txt(35px, 700, $hover-blue, center);
   @include txt-option(1.71, 0px);
   font-family: $font-family-YuGothic;
 }

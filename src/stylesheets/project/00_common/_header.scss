@@ -17,9 +17,10 @@
 }
 .header__inner {
   width: 100%;
-  max-width: rem(1800px);
+  max-width: rem(1760px);
   height: rem(50px);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   margin-top: rem(50px);
@@ -50,8 +51,11 @@
   @include mq(sp-tb) {
     display: block;
     width: 100%;
-    max-width: rem(1081px);
-    margin-left: auto;
+    max-width: rem(795px);
+    margin-left: 0;
+  }
+  @include mq(pc-w) {
+    margin-left: rem(127px);
   }
 }
 .header__items {
@@ -68,9 +72,28 @@
     min-width: rem(120px);
   }
 }
+.header__item:nth-child(1) {
+  min-width: rem(32px);
+  @include mq(pc-m) {
+    min-width: rem(90px);
+  }
+}
 .header__item a {
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1.68, 0px);
+  transition: all 0.3s ease-out;
+}
+@media (hover: hover) {
+  .header__item a:hover {
+    color: $hover-hex;
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .header__item a:active {
+    color: $hover-hex;
+    opacity: 1;
+  }
 }
 
 // ================================================================
@@ -105,6 +128,7 @@
 .header__topic a {
   @include txt(16px, 700, $color-white, center);
   @include txt-option(1.56, 0px);
+  transition: all 0.3s ease-out;
 }
 .header__web {
   width: rem(100px);
@@ -117,6 +141,7 @@
   @include txt(16px, 700, $color-white, center);
   @include txt-option(1.56, 0px);
   background-color: $backcolor-hex;
+  transition: all 0.3s ease-out;
 }
 .header__wrapper {
   width: rem(150px);
@@ -136,6 +161,7 @@
   @include txt(16px, 700, $color-white, center);
   @include txt-option(1.56, 0px);
   background-color: $backcolor-red;
+  transition: all 0.3s ease-out;
 }
 .header__payment {
   width: 100%;
@@ -146,11 +172,49 @@
   @include txt(16px, 700, $color-white, center);
   @include txt-option(1.56, 0px);
   background-color: $backcolor-red;
+  transition: all 0.3s ease-out;
 }
 .header__instagram {
   width: rem(36px);
   height: rem(36px);
   @include mq(pc-m) {
     margin-left: auto;
+  }
+}
+
+@media (hover: hover) {
+  .header__topic a:hover {
+    background-color: $hover-green;
+    opacity: 1;
+  }
+  .header__web a:hover {
+    background-color: $hover-hex;
+    opacity: 1;
+  }
+  .header__reserve a:hover {
+    background-color: $hover-red;
+    opacity: 1;
+  }
+  .header__payment a:hover {
+    background-color: $hover-red;
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .header__topic a:active {
+    background-color: $hover-green;
+    opacity: 1;
+  }
+  .header__web a:active {
+    background-color: $hover-hex;
+    opacity: 1;
+  }
+  .header__reserve a:active {
+    background-color: $hover-red;
+    opacity: 1;
+  }
+  .header__payment a:active {
+    background-color: $hover-red;
+    opacity: 1;
   }
 }

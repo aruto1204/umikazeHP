@@ -61,7 +61,20 @@
 }
 @media (hover: hover) {
   .guid__item:hover {
-    background-color: $hover-green;
+    background-color: $hover-blue;
+    transition: 0.3s all ease-out;
+    .guid__item-link {
+      opacity: 1;
+    }
+    .guid__item-img img {
+      transform: scale(1.1, 1.1);
+      transition: 0.3s all ease-out;
+    }
+  }
+}
+@media (hover: none) {
+  .guid__item:active {
+    background-color: $hover-blue;
     transition: 0.3s all ease-out;
     .guid__item-link {
       opacity: 1;

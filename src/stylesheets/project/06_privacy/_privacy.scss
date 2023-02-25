@@ -32,6 +32,7 @@
 .privacy__item-text {
   @include txt(16px, 500, $color-default-font, left);
   @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
   padding-top: rem(44px);
 }
 

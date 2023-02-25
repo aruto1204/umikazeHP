@@ -29,6 +29,7 @@
 .classroom__item-title {
   @include txt(25px, 500, $color-default-font, center);
   @include txt-option(1.28, 0px);
+  font-family: $font-family-Hiragino;
 }
 .classroom__item-text {
   @include txt(16px, 500, $color-default-font, center);
@@ -42,6 +43,7 @@
 .classroom__schedule {
   @include txt(25px, 500, $color-default-font, center);
   @include txt-option(2.8, 0px);
+  font-family: $font-family-Hiragino;
   margin-top: rem(71.5px);
   @include mq(sp-s) {
     font-size: 20px;
@@ -59,6 +61,7 @@
 .classroom__comment h3 {
   @include txt(25px, 500, $color-default-font, center);
   @include txt-option(3.2, 0px);
+  font-family: $font-family-Hiragino;
   @include mq(sp-s) {
     font-size: 20px;
   }
@@ -67,4 +70,5 @@
   padding-top: rem(1px);
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(2.18, 0px);
+  font-family: $font-family-YuGothic;
 }

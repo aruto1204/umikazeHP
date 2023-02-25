@@ -25,13 +25,18 @@
   justify-content: center;
   align-items: center;
   @include txt(16px, 700, $color-white, center);
+  font-family: $font-family-YuGothic;
   transition: all 0.3s ease-out;
 }
-
 @media (hover: hover) {
   .reserve__content-btn a:hover {
-    background-color: $hover-green;
+    background-color: $hover-btn;
     opacity: 1;
-    transition: all 0.3s ease-out;
+  }
+}
+@media (hover: none) {
+  .reserve__content-btn a:active {
+    background-color: $hover-btn;
+    opacity: 1;
   }
 }

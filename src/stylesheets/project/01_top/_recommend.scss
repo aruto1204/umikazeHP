@@ -131,25 +131,42 @@
 
 @media (hover: hover) {
   .recommend__item:hover {
-    transition: all 0.3s ease-out;
     @include mq(sp-tb) {
       height: rem(344.75px);
-      width: 30%;
     }
     .recommend__item-link {
-      transition: all 0.3s ease-out;
       @include mq(sp-tb) {
         padding-top: rem(36.37px);
       }
     }
     .recommend__wrapper-title {
       color: $backcolor-green;
-      transition: color 0.3s ease-out;
     }
     &::after {
-      transform: scaleX(1.2);
+      transform: scaleX(1.1);
       opacity: 1;
-      transition: all 0.3s ease-out;
+      @include mq(sp-tb) {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+@media (hover: none) {
+  .recommend__item:active {
+    @include mq(sp-tb) {
+      height: rem(344.75px);
+    }
+    .recommend__item-link {
+      @include mq(sp-tb) {
+        padding-top: rem(36.37px);
+      }
+    }
+    .recommend__wrapper-title {
+      color: $backcolor-green;
+    }
+    &::after {
+      transform: scaleX(1.1);
+      opacity: 1;
       @include mq(sp-tb) {
         transform: scaleX(1);
       }

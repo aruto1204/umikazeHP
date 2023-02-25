@@ -47,6 +47,20 @@
 .footer__item a {
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1.687, 0px);
+  font-family: $font-family-YuGothic;
+  transition: all 0.3s ease-out;
+}
+@media (hover: hover) {
+  .footer__item a:hover {
+    color: $hover-hex;
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .footer__item a:active {
+    color: $hover-hex;
+    opacity: 1;
+  }
 }
 
 // ================================================================
@@ -96,6 +110,7 @@
 .footer__contact-text {
   @include txt(16px, 500, $color-default-font, Left);
   @include txt-option(1.562, 0px);
+  font-family: $font-family-YuGothic;
 }
 .footer__contact-text p:nth-of-type(2) {
   padding-left: rem(16px);
@@ -110,6 +125,7 @@
   background-color: $backcolor-green;
   @include txt(18px, 700, $color-white, Left);
   @include txt-option(1, 0px);
+  font-family: $font-family-YuGothic;
   @include mq(sp-tb) {
     max-width: rem(289px);
   }
@@ -119,8 +135,11 @@
 }
 .footer__contact-tel {
   margin-top: rem(4px);
+}
+.footer__contact-tel a {
   @include txt(35px, 700, $color-default-font, Left);
   @include txt-option(1, 0px);
+  font-family: $font-family-YuGothic;
   @include mq(sp-s) {
     font-size: 28px;
   }
@@ -128,6 +147,7 @@
 .footer__contact-tel span {
   @include txt(25px, 700, $color-default-font, Left);
   @include txt-option(1, 0px);
+  font-family: $font-family-YuGothic;
   @include mq(sp-s) {
     font-size: 20px;
   }
@@ -147,6 +167,33 @@
     margin-left: auto;
   }
 }
+@media (hover: hover) {
+  .footer__contact-tel a:hover {
+    @include mq(pc) {
+      color: $color-default-font;
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}
+@media (hover: none) {
+  .footer__contact-tel a:active {
+    @include mq(pc) {
+      color: $color-default-font;
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}
+
+// ================================================================
+//  スマホサイズ時のみ電話がかけられるようにする
+// ================================================================
+@include mq(pc) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
 
 // ================================================================
 //  footer__foot
@@ -157,4 +204,5 @@
 .footer__copy {
   @include txt(16px, 500, $color-default-font, center);
   @include txt-option(1, 0px);
+  font-family: $font-family-YuGothic;
 }
