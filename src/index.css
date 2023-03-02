@@ -1,0 +1,767 @@
+@charset "UTF-8";
+.price__guid {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 9.3125rem;
+}
+
+.price__guid__inner {
+  width: 100%;
+  height: 100%;
+  max-width: 61.125rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 567px) {
+  .price__guid__inner {
+    padding: 0 1.25rem;
+  }
+}
+
+.price__guid-content {
+  margin-top: 7.375rem;
+}
+
+.price__guid-title {
+  font-size: 45px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.17;
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 567px) {
+  .price__guid-title {
+    font-size: 36px;
+  }
+}
+
+.price__guid-campaign {
+  width: 100%;
+  height: 4rem;
+  margin-top: 6.1875rem;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+}
+
+.price__guid-campaign p {
+  width: 20.375rem;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #70f5f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  line-height: 1.68;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+@media screen and (max-width: 567px) {
+  .price__guid-campaign p {
+    font-size: 24px;
+    width: 16rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .price__guid-campaign p {
+    width: 29.75rem;
+    font-size: 32px;
+  }
+}
+
+.price__guid-text {
+  margin-top: 0.53125rem;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+@media screen and (max-width: 567px) {
+  .price__guid-text {
+    padding: 0 0.625rem;
+    font-size: 18px;
+  }
+}
+
+.price__guid__items {
+  max-width: 56.875rem;
+  width: 100%;
+  margin-top: 3.46875rem;
+  position: relative;
+}
+
+.price__guid__items-background {
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 13.125rem;
+  height: 100%;
+  background-color: #70f5f0;
+  z-index: -1;
+  opacity: 0.18;
+}
+@media screen and (max-width: 567px) {
+  .price__guid__items-background {
+    left: -10px;
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .price__guid__items-background {
+    width: 15rem;
+  }
+}
+
+.price__guid__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+}
+
+.price__guid__item:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.price__guid__item-title {
+  width: 11.375rem;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  text-align: left;
+  line-height: 1.7;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  padding-top: 1.53125rem;
+  padding-bottom: 1.53125rem;
+  margin-left: 0.8125rem;
+  margin-right: 1.25rem;
+}
+@media screen and (max-width: 567px) {
+  .price__guid__item-title {
+    width: 9.25rem;
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 0.625rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .price__guid__item-title {
+    width: 12rem;
+    font-size: 24px;
+    margin-right: 3.125rem;
+  }
+}
+
+.price__guid__item-time {
+  width: 4.625rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  background-color: #37c7c1;
+}
+@media screen and (max-width: 567px) {
+  .price__guid__item-time {
+    font-size: 16px;
+    width: 2.75rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .price__guid__item-time {
+    width: 5.625rem;
+  }
+}
+
+.price__guid__item-price {
+  margin-left: 0.375rem;
+  font-size: 28px;
+  font-weight: 500;
+  color: #000000;
+  text-align: left;
+  line-height: 1.51;
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 567px) {
+  .price__guid__item-price {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .price__guid__item-price {
+    font-size: 35px;
+  }
+}
+
+.price__guid__item-price span {
+  font-size: 20px;
+}
+@media screen and (max-width: 567px) {
+  .price__guid__item-price span {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .price__guid__item-price span {
+    font-size: 25px;
+  }
+}
+
+.price__guid__item:nth-of-type(1) .price__guid__item-title {
+  padding-top: 0.96875rem;
+}
+.price__guid__item:nth-of-type(1) .price__guid__item-time {
+  margin-bottom: 0.5625rem;
+}
+.price__guid__item:nth-of-type(1) .price__guid__item-price {
+  margin-bottom: 0.5625rem;
+}
+
+.price__guid__item:nth-last-of-type(1) .price__guid__item-title {
+  padding-bottom: 2.53125rem;
+}
+.price__guid__item:nth-last-of-type(1) .price__guid__item-time {
+  margin-bottom: 1rem;
+}
+.price__guid__item:nth-last-of-type(1) .price__guid__item-price {
+  margin-bottom: 1rem;
+}
+
+.payment {
+  width: 100%;
+  padding-top: 10.84375rem;
+  margin-bottom: 7.96875rem;
+}
+
+.payment__inner {
+  width: 100%;
+  height: 100%;
+  max-width: 52.4375rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 567px) {
+  .payment__inner {
+    padding: 0 1.25rem;
+  }
+}
+
+.payment__content-title {
+  font-size: 45px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.17;
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 567px) {
+  .payment__content-title {
+    font-size: 36px;
+  }
+}
+
+.payment__content-text {
+  width: 100%;
+  background-color: #70f5f0;
+  border-radius: 28px;
+  margin-top: 2.875rem;
+  padding: 0 1.25rem;
+  padding-top: 1.4375rem;
+  padding-bottom: 1.46875rem;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  line-height: 1.68;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+@media screen and (max-width: 567px) {
+  .payment__content-text {
+    font-size: 24px;
+  }
+}
+
+.payment__content-text p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 2.18;
+  letter-spacing: 0px;
+  margin-top: -0.40625rem;
+}
+
+.payment-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #4db1ac;
+  text-align: center;
+  line-height: 1.71;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+
+.payment-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 2.18;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  margin-top: -0.1875rem;
+}
+
+.payment__cash {
+  margin-top: 2.84375rem;
+}
+
+.payment__qr {
+  margin-top: 4.3125rem;
+}
+
+.payment__qr__content {
+  margin-top: 0.90625rem;
+  padding: 0 1.25rem;
+  padding-top: 1.625rem;
+  padding-bottom: 2.46875rem;
+  border: 1px solid #707070;
+  border-radius: 28px;
+}
+
+.payment__qr__content-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+
+.payment__qr__content-items {
+  max-width: 35.125rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-left: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 567px) {
+  .payment__qr__content-items {
+    display: block;
+    margin-top: 2.5rem;
+  }
+}
+
+.payment__qr__content-item {
+  max-width: 8.5rem;
+  width: 100%;
+}
+@media screen and (max-width: 567px) {
+  .payment__qr__content-item {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .payment__qr__content-item + .payment__qr__content-item {
+    margin-top: 1.25rem;
+  }
+}
+
+.payment__qr__content-item-img {
+  width: 100%;
+  height: 6.6875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment__qr__content-item-title p {
+  margin-top: 1.25rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+@media screen and (max-width: 567px) {
+  .payment__qr__content-item-title p {
+    font-size: 16px;
+  }
+}
+
+.payment__qr__content-item-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 1.21875rem;
+  background-color: #707070;
+}
+
+.payment__electronic {
+  margin-top: 6.34375rem;
+}
+
+.payment__electronic__content {
+  margin-top: 1.71875rem;
+  padding: 0 1.25rem;
+  padding-top: 1.625rem;
+  padding-bottom: 1.9375rem;
+  border: 1px solid #707070;
+  border-radius: 28px;
+}
+
+.payment__electronic__content-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+
+.payment__electronic__content-wrapper {
+  max-width: 25.75rem;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 567px) {
+  .payment__electronic__content-wrapper {
+    max-width: 15.625rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .payment__electronic__content-wrapper {
+    max-width: 43.625rem;
+  }
+}
+
+.payment__electronic__content-wrapper img {
+  max-width: 25.75rem;
+  height: 6rem;
+  width: 100%;
+}
+@media screen and (max-width: 567px) {
+  .payment__electronic__content-wrapper img {
+    max-width: 15.625rem;
+    height: 3.625rem;
+  }
+}
+
+.payment__electronic__content-wrapper img:nth-child(2) {
+  max-width: 17.3125rem;
+  margin-left: 0;
+  margin-top: 1.5rem;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.8125rem;
+  width: 100%;
+}
+@media screen and (max-width: 567px) {
+  .payment__electronic__content-wrapper img:nth-child(2) {
+    max-width: 10.5rem;
+    height: 3.625rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .payment__electronic__content-wrapper img:nth-child(2) {
+    margin-left: 0.4375rem;
+    margin-top: 0;
+  }
+}
+
+.payment__electronic__content-wrapper img:nth-child(3) {
+  max-width: 7.8125rem;
+  width: 100%;
+  height: 6rem;
+  padding-bottom: 0.75rem;
+  margin-top: 1.5rem;
+  margin-left: 0.625rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__electronic__content-wrapper img:nth-child(3) {
+    max-width: 4.6875rem;
+    height: 3.125rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding: 0;
+    margin-top: 0.75rem;
+    margin-left: 0.4375rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .payment__electronic__content-wrapper img:nth-child(3) {
+    margin-left: 0;
+  }
+}
+
+.payment__electronic__content-wrapper img:nth-child(4) {
+  max-width: 25.6875rem;
+  width: 100%;
+  padding-top: 0.125rem;
+  padding-bottom: 1.6875rem;
+  margin-top: 1.5rem;
+  margin-left: 0.0625rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__electronic__content-wrapper img:nth-child(4) {
+    max-width: 15.625rem;
+    height: 3.625rem;
+    padding-top: 0.54375rem;
+    padding-bottom: 0.54375rem;
+    margin-top: 0.75rem;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .payment__electronic__content-wrapper img:nth-child(4) {
+    margin-left: 1.5rem;
+  }
+}
+
+.payment__electronic__content-category {
+  width: 100%;
+  padding-left: 2.71875rem;
+  padding-right: 2.59375rem;
+}
+
+.payment__electronic__content-category p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  margin-top: 1.25rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__electronic__content-category p {
+    font-size: 16px;
+  }
+}
+
+.payment__electronic__content-category::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 0.625rem;
+  background-color: #707070;
+}
+
+.payment__credit {
+  margin-top: 6.59375rem;
+}
+
+.payment__credit__content {
+  margin-top: 0.90625rem;
+  padding: 0 1.25rem;
+  padding-top: 1.625rem;
+  padding-bottom: 1.984375rem;
+  border: 1px solid #707070;
+  border-radius: 28px;
+}
+
+.payment__credit__content-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+
+.payment__credit__content-items {
+  max-width: 21.8125rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1.84375rem;
+  padding-left: 0.625rem;
+  display: grid;
+  grid-template-columns: repeat(2, 136px);
+  row-gap: 2.421875rem;
+  column-gap: 4.8125rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-items {
+    max-width: 15.625rem;
+    padding-left: 0;
+    grid-template-columns: repeat(2, 110px);
+    column-gap: 1.25rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .payment__credit__content-items {
+    max-width: 35.75rem;
+    grid-template-columns: repeat(3, 136px);
+  }
+}
+
+.payment__credit__content-item {
+  max-width: 8.5rem;
+}
+
+.payment__credit__content-item-img {
+  width: 100%;
+  height: 5.125rem;
+  margin-bottom: 1.03125rem;
+  object-fit: cover;
+}
+
+.payment__credit__content-item:nth-child(2) .payment__credit__content-item-img {
+  max-width: 7.34375rem;
+  height: 4.8125rem;
+  margin-bottom: 1.328125rem;
+  padding-top: 0.375rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-item:nth-child(2) .payment__credit__content-item-img {
+    max-width: 6.625rem;
+    padding-left: 0.25rem;
+  }
+}
+
+.payment__credit__content-item:nth-child(3) .payment__credit__content-item-img {
+  max-width: 7.34375rem;
+  height: 5.125rem;
+  margin-bottom: 1.640625rem;
+  padding-top: 0.375rem;
+  padding-left: 1.40625rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-item:nth-child(3) .payment__credit__content-item-img {
+    max-width: 6.5625rem;
+    padding-left: 0.3125rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .payment__credit__content-item:nth-child(3) .payment__credit__content-item-img {
+    margin-bottom: 1.015625rem;
+  }
+}
+
+.payment__credit__content-item:nth-child(4) .payment__credit__content-item-img {
+  max-width: 6.765625rem;
+  height: 5.75rem;
+  margin-bottom: 1.015625rem;
+  padding-left: 1.015625rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-item:nth-child(4) .payment__credit__content-item-img {
+    max-width: 6.3125rem;
+    padding-left: 0.5625rem;
+  }
+}
+
+.payment__credit__content-item:nth-child(5) .payment__credit__content-item-img {
+  max-width: 7.34375rem;
+  height: 5.375rem;
+  margin-bottom: 1.390625rem;
+  padding-top: 0.3125rem;
+  padding-left: 0.46875rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-item:nth-child(5) .payment__credit__content-item-img {
+    max-width: 6.5625rem;
+    height: 4.875rem;
+    padding-left: 0.3125rem;
+    margin-bottom: 1.890625rem;
+  }
+}
+
+.payment__credit__content-item:nth-child(6) .payment__credit__content-item-img {
+  max-width: 7.90625rem;
+  height: 5.0625rem;
+  margin-bottom: 1.703125rem;
+  padding-top: 0.5625rem;
+  padding-left: 0.59375rem;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-item:nth-child(6) .payment__credit__content-item-img {
+    max-width: 6.46875rem;
+    height: 4.25rem;
+    padding-left: 0.40625rem;
+    margin-bottom: 2.515625rem;
+  }
+}
+
+.payment__credit__content-item-title p {
+  margin-top: 1.25rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}
+@media screen and (max-width: 567px) {
+  .payment__credit__content-item-title p {
+    font-size: 16px;
+  }
+}
+
+.payment__credit__content-item-title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #707070;
+}
+
+.payment__credit-supplement {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-align: left;
+  line-height: 2.18;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+  margin-top: 0.59375rem;
+}
+
+.payment__credit-note {
+  width: 100%;
+  background-color: #70f5f0;
+  margin-top: 1.109375rem;
+  padding-top: 0.90625rem;
+  padding-bottom: 1.21875rem;
+  padding-left: 1.5rem;
+  padding-right: 0.75rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-align: left;
+  line-height: 2.18;
+  letter-spacing: 0px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
+}/*# sourceMappingURL=index.css.map */

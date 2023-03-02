@@ -23,7 +23,7 @@
     },
   ]
   const footerItems = {
-        icon: "../images/00_common/footer_icon.png",
+        icon: "../images/00_common/umikaze_icon.png",
         iconAlt: "フッターアイコン",
         url: "/",
         map: "../images/00_common/footer_map.jpg",
@@ -31,14 +31,16 @@
   }
   const footerContact = {
     text01: "住所／神奈川県逗子市逗子5丁目2−50 <br>■電車ご利用の方",
-    text02: "JR逗子駅東口より徒歩3分<br>京急逗子・葉山駅より徒歩3分 ■お車でご来院の方<br>横浜銀行逗子支店隣のコインパーキングをご利用下さい。<br>コインパーキング徒歩0分",
+    text02: "JR逗子駅東口より徒歩2分<br>京急逗子・葉山駅より徒歩2分",
+    text03: "■お車でご来院の方",
+    text04: "横浜銀行逗子支店隣のコインパーキングをご利用下さい。<br>コインパーキング徒歩0分",
     tel: "お電話でのお問い合わせ",
-    number: "<span>TEL</span> 046-876-1124",
-    href: "tel:046-876-1124",
-    web: "webでのお問い合わせ",
+    number: "<span>TEL</span> 046-854-7390",
+    href: "tel:046-854-7390",
+    line: "LINEでのお問い合わせ",
   }
   const footerCopy = {
-    text: "&copy;2022 by うみかぜ助産院",
+    text: "&copy;2023 by うみかぜ助産院",
   }
 //footer
 footer.footer
@@ -57,12 +59,14 @@ footer.footer
           .footer__contact-text
             p !{footerContact.text01}
             p !{footerContact.text02}
+            p !{footerContact.text03}
+            p !{footerContact.text04}
           .footer__contact-title
             h3 !{footerContact.tel}
           .footer__contact-tel
             a(href=footerContact.href) !{footerContact.number}
           .footer__contact-title
-            h3 !{footerContact.web}
+            h3 !{footerContact.line}
         .footer__wrapper-map
           img(src=footerItems.map, alt=footerItems.mapAlt)
     .footer__foot

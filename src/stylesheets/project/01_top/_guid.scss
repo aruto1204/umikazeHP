@@ -26,6 +26,8 @@
   margin: 0 auto;
   padding-bottom: rem(33.5px);
   background-color: $color-green;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
   @include mq(sp-tb) {
     max-width: rem(672px);
     width: 47.3%;
@@ -46,6 +48,9 @@
   width: 100%;
   overflow: hidden;
 }
+.guid__item-img img {
+  transition: 0.3s all ease-out;
+}
 .guid__item-title {
   @include txt(25px, 700, $color-white, center);
   @include txt-option(1, 0px);
@@ -62,26 +67,22 @@
 @media (hover: hover) {
   .guid__item:hover {
     background-color: $hover-blue;
-    transition: 0.3s all ease-out;
     .guid__item-link {
       opacity: 1;
     }
     .guid__item-img img {
       transform: scale(1.1, 1.1);
-      transition: 0.3s all ease-out;
     }
   }
 }
 @media (hover: none) {
   .guid__item:active {
     background-color: $hover-blue;
-    transition: 0.3s all ease-out;
     .guid__item-link {
       opacity: 1;
     }
     .guid__item-img img {
       transform: scale(1.1, 1.1);
-      transition: 0.3s all ease-out;
     }
   }
 }

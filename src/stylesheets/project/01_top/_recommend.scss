@@ -135,6 +135,7 @@
       height: rem(344.75px);
     }
     .recommend__item-link {
+      opacity: 1;
       @include mq(sp-tb) {
         padding-top: rem(36.37px);
       }
@@ -157,6 +158,7 @@
       height: rem(344.75px);
     }
     .recommend__item-link {
+      opacity: 1;
       @include mq(sp-tb) {
         padding-top: rem(36.37px);
       }

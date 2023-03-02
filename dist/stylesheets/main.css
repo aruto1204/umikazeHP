@@ -881,7 +881,7 @@ textarea {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
 }
 
-.footer__contact-text p:nth-of-type(2) {
+.footer__contact-text p:nth-of-type(even) {
   padding-left: 1rem;
 }
 
@@ -1756,6 +1756,11 @@ textarea {
     height: 21.546875rem;
   }
 }
+@media (hover: hover) {
+  .recommend__item:hover .recommend__item-link {
+    opacity: 1;
+  }
+}
 @media screen and (hover: hover) and (min-width: 1024px) {
   .recommend__item:hover .recommend__item-link {
     padding-top: 2.273125rem;
@@ -1780,6 +1785,11 @@ textarea {
 @media screen and (hover: none) and (min-width: 1024px) {
   .recommend__item:active {
     height: 21.546875rem;
+  }
+}
+@media (hover: none) {
+  .recommend__item:active .recommend__item-link {
+    opacity: 1;
   }
 }
 @media screen and (hover: none) and (min-width: 1024px) {
@@ -1830,6 +1840,8 @@ textarea {
   margin: 0 auto;
   padding-bottom: 2.09375rem;
   background-color: #37c7c1;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .guid__item {
@@ -1858,6 +1870,10 @@ textarea {
   overflow: hidden;
 }
 
+.guid__item-img img {
+  transition: 0.3s all ease-out;
+}
+
 .guid__item-title {
   font-size: 25px;
   font-weight: 700;
@@ -1884,27 +1900,23 @@ textarea {
 @media (hover: hover) {
   .guid__item:hover {
     background-color: #4db1ac;
-    transition: 0.3s all ease-out;
   }
   .guid__item:hover .guid__item-link {
     opacity: 1;
   }
   .guid__item:hover .guid__item-img img {
     transform: scale(1.1, 1.1);
-    transition: 0.3s all ease-out;
   }
 }
 @media (hover: none) {
   .guid__item:active {
     background-color: #4db1ac;
-    transition: 0.3s all ease-out;
   }
   .guid__item:active .guid__item-link {
     opacity: 1;
   }
   .guid__item:active .guid__item-img img {
     transform: scale(1.1, 1.1);
-    transition: 0.3s all ease-out;
   }
 }
 .info {
@@ -3729,6 +3741,10 @@ td {
   width: 100%;
   margin: 0 auto;
   margin-top: 2.4375rem;
+}
+
+pre {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", serif;
 }
 
 @media screen and (min-width: 767px) {

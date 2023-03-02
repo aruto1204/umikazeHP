@@ -112,7 +112,7 @@
   @include txt-option(1.562, 0px);
   font-family: $font-family-YuGothic;
 }
-.footer__contact-text p:nth-of-type(2) {
+.footer__contact-text p:nth-of-type(even) {
   padding-left: rem(16px);
 }
 .footer__contact-title {

@@ -34,21 +34,21 @@
         name: "TOPIC<br>最新情報",
         url: "/topic",
   }
-  const navWeb = {
-        name: "webでの<br>お問い合わせ",
+  const navLine = {
+        name: "LINEでの<br>お問い合わせ",
         url: "/",
   }
   const navReserve = {
         name: "ご予約",
-        url: "/",
+        url: "https://coubic.com/seabreezebooking/services#pageContent",
   }
   const navPayment = {
         name: "お支払いはこちら",
         url: "/price#payment",
   }
   const navInstagram = {
-        name: "instagram",
-        url: "/",
+        name: "instagram_icon",
+        url: "https://instagram.com/seabreeze_womens_care_salon?igshid=YmMyMTA2M2Y=",
         icon: "../images/01_top/square-instagram.svg",
   }
 //header
@@ -65,15 +65,15 @@ header.header
       .header__topic
         a(href=navTopic.url class="link-btn") !{navTopic.name}
       .header__web
-        a(href=navWeb.url class="link-btn") !{navWeb.name}
+        a(href=navLine.url class="link-btn") !{navLine.name}
       .header__wrapper
         .header__reserve
-          a(href=navReserve.url class="link-btn") !{navReserve.name}
+          a(href=navReserve.url class="link-btn" target="_blank" rel="noopener noreferrer") !{navReserve.name}
         .header__payment
           a(href=navPayment.url class="link-btn") #{navPayment.name}
       .header__instagram
-        a(href=navInstagram.url)
-          img(src=navInstagram.icon, alt="")
+        a(href=navInstagram.url target="_blank" rel="noopener noreferrer")
+          img(src=navInstagram.icon, alt=navInstagram.name)
     //hamburger menu
     .header__drawer
       - for (var i = 0; i < 3; i++)

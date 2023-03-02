@@ -169,18 +169,6 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   (0,_humburger_menu__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_swiper__WEBPACK_IMPORTED_MODULE_1__["default"])();
-
-  // 画面幅測定用
-  // function getWindowSize() {
-  //   var sW, sH, s;
-  //   sW = window.innerWidth;
-  //   sH = window.innerHeight;
-
-  //   s = "横幅 = " + sW + " / 高さ = " + sH;
-
-  //   document.getElementById("WinSize").innerHTML = s;
-  // }
-  // getWindowSize();
 });
 })();
 
